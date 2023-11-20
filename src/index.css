@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* medium სტილის შემოტანა */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
+@font-face {
+  font-family: "Custom-1";
+  src: url("../public/Snell Roundhand Regular.ttf");
+}
+
+@font-face {
+  font-family: "Custom-2";
+  src: url("../public/Helvetica-Font.zip");
+}
