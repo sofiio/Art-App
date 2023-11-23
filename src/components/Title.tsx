@@ -8,8 +8,8 @@ interface TitleProps {
 
 const Title: FC<TitleProps> = ({ paragraphText, titleText }) => {
   return (
-    <div className="w-full mx-auto">
-      <div className="lg:w-[768px] md:w-[700px] md:h-[96px] md:p-4 lg:p-0 w-[267px] h-[32px] space-y-4 md:mx-auto ml-[16px] mt-[16px] md:mt-[80px]">
+    <div className="lg:w-[768px] md:w-[700px] w-[343px] mx-auto">
+      <div className="lg:w-[768px] md:w-[700px] md:h-[96px]  h-[32px] space-y-4 md:mx-auto  mt-[16px] md:mt-[80px]">
         <div className="md:flex hidden items-center">
           <button className={`flex items-center w-[70px] h-[24px]`}>
             <h1 className="text-[16px] font-sans">Home</h1>

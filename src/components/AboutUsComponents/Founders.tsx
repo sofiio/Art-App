@@ -1,13 +1,14 @@
 function Founders() {
   return (
     <>
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex mt-[163px] mx-auto w-[1312px] h-[567px]">
-          <div className="w-[657px] h-[547px]">
-            <h1 className="text-[32px] font-black font-quinapple">
+      <div className="2xl:w-[1440px] lg:w-[900px] w-[375px] md:w-[543px] mx-auto flex flex-row">
+        <div className="flex lg:mt-[163px] mt-[57px] mx-auto lg:w-[1312px] w-[343px] md:w-[543px] h-[567px]">
+          <div className="lg:w-[657px] w-[343px] md:w-[543px] lg:h-[547px] h-[567px] flex flex-col items-center lg:items-start">
+            <h1 className="lg:text-[32px] text-[28px] font-black font-quinapple">
               GIORGI TSITURI
             </h1>
-            <h1 className="mt-[17px] text-[20px] font-sans font-medium">
+            <img src="/gi.png" alt="" className="block lg:hidden mt-[24px]" />
+            <h1 className="mt-[17px] 2xl:text-[20px] text-[16px] font-sans lg:font-medium">
               Tutor from Europe, Georgia, is known in his country for his
               special teaching skills and approach to subjects such as history
               of music and musicians, world of theatre and literature. With a
@@ -25,20 +26,27 @@ function Founders() {
               cultural and historical significance of these subjects.
             </h1>
           </div>
-          <div className="ml-[88px]">
-            <img src="/gi.png" alt="" />
+          <div className="lg:ml-[88px]">
+            <img src="/gi.png" alt="" className="lg:block hidden" />
           </div>
         </div>
       </div>
-      <div className="flex mt-[163px] mx-auto w-[1312px] h-[570px]">
+      <div className="flex lg:flex-row flex-col 2xl:mt-[163px] mt-[350px] lg:mt-0 mx-auto 2xl:w-[1312px] lg:w-[900px] w-[343px] md:w-[543px] h-[570px] 2xl:h-[570px] lg:h-[500px]">
         <div>
-          <img src="/te.png" alt="" />
-        </div>
-        <div className="w-[657px] h-[547px] ml-[43px]">
-          <h1 className="text-[32px] font-black font-quinapple">
+          <h1 className="text-[32px] font-black font-quinapple lg:hidden block">
             Teo Tsotsolashvili
           </h1>
-          <h1 className="mt-[17px] text-[20px] font-medium">
+          <img
+            src="/te.png"
+            alt=""
+            className="w-[343px] md:w-[543px] h-[313px] md:h-[513px] lg:w-auto lg:h-auto mt-[16px] lg:mt-0"
+          />
+        </div>
+        <div className="lg:w-[657px] w-[343px] md:w-[543px] h-[547px] lg:ml-[43px]">
+          <h1 className="text-[32px] font-black font-quinapple hidden lg:block">
+            Teo Tsotsolashvili
+          </h1>
+          <h1 className="lg:mt-[17px] mt-[24px] 2xl:text-[20px] text-[16px] font-medium">
             Together with Teo Tsotsolashvili, his spouse and the partner in
             ‘crime’, Giorgi Tsituri’s teaching style may involve storytelling,
             interactive discussions, and possibly integrating music, or theater

@@ -1,15 +1,11 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+// / import Footer from "../components/Footer";
+// import Header from "../components/Header";
 import Share from "../components/Share";
 import SharedComponent from "../components/SharedComponent";
 import Title from "../components/Title";
 
 function Music() {
   const sections = [
-    {
-      image: "/mus.png",
-      text: "Music transcends time and culture, touching our souls in ways words cannot. Our classes explore the evolution of music, from classical maestros like Bach to rock legends like Jimi Hendrix. We study the revolutionary lyrics of Bob Dylan and the electrifying performances of Led Zeppelin, understanding how music has both reflected and shaped the world.",
-    },
     {
       image: "/mus1.png",
       text: [
@@ -22,13 +18,23 @@ function Music() {
       text: "Exposure to different musical genres introduces our young students to diverse cultures and traditions. It broadens their understanding of the world, promoting cultural awareness and appreciation for various backgrounds",
     },
   ];
+
+  // Use the coverImage from the first section
+  const coverImage = "/mus.png";
+  const seperateText =
+    "Music transcends time and culture, touching our souls in ways words cannot. Our classes explore the evolution of music, from classical maestros like Bach to rock legends like Jimi Hendrix. We study the revolutionary lyrics of Bob Dylan and the electrifying performances of Led Zeppelin, understanding how music has both reflected and shaped the world.";
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Title paragraphText="Music" titleText="The Soundtrack of planet Earth" />
-      <SharedComponent sections={sections} />
+      <SharedComponent
+        sections={sections}
+        coverImage={coverImage}
+        seperateText={seperateText}
+      />
       <Share />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

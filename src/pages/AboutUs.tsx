@@ -1,21 +1,29 @@
+import { Link } from "react-router-dom";
 import Founders from "../components/AboutUsComponents/Founders";
 import OurTeam from "../components/AboutUsComponents/OurTeam";
 import Testimonial from "../components/AboutUsComponents/Testimonial";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Footer from "../components/Footer";
+// import Header from "../components/Header";
 import OurLessons from "../components/LandingComponents/OurLessons";
 
 function AboutUs() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="relative">
         <img src="/xxx.png" alt="" className="w-full h-full object-cover" />
+        <Link to="/">
+          <img
+            src="/frr.svg"
+            alt=""
+            className="absolute cursor-pointer top-[16px] left-[16px] lg:hidden"
+          />
+        </Link>
       </div>
 
       {/* text */}
-      <div className="w-[1312px] h-[192px] mt-[75px] mx-auto font-black">
-        <h1 className="text-[40px] font-quinapple">
+      <div className="2xl:w-[1312px] lg:w-[900px] w-[343px] md:w-[543px] lg:h-[192px] h-[261px] lg:mt-[75px] mt-[32px] mx-auto font-black">
+        <h1 className="lg:text-[40px] text-[24px] font-quinapple">
           Our non-formal educational classes are your gateway to the captivating
           realms of theater, literature, and music, where legendary actors,
           writers and rock stars have left an indelible mark on the world's
@@ -25,8 +33,8 @@ function AboutUs() {
       <OurTeam />
       <Founders />
       {/* texts */}
-      <div className="w-[1312px] h-[362px] mx-auto mt-[61px]">
-        <h1 className="text-[20px] font-medium">
+      <div className="2xl:w-[1312px] lg:w-[900px]  w-[343px] md:w-[543px] lg:h-[362px] h-[571px] md:h-[500px] mx-auto mt-[350px] lg:mt-0 2xl:mt-[61px]">
+        <h1 className="2xl:text-[20px] text-[16px] font-medium">
           At ‘VII Lesson’ we believe that literature is more than words on a
           page; Music is not just melody that reminds you having nice time and
           Theater is a gateway to understanding the human experience across time
@@ -53,10 +61,14 @@ function AboutUs() {
       </div>
 
       {/* last picture */}
-      <img src="/last.png" alt="" className="mx-auto mt-[60px]" />
+      <img
+        src="/last.png"
+        alt=""
+        className="mx-auto 2xl:mt-[60px] mt-[120px] md:mt-0 w-[343px] md:w-[543px] h-[204px] md:h-[300px] lg:w-[900px]  2xl:w-auto lg:h-auto"
+      />
 
       {/* last text */}
-      <div className="mt-[78px] w-[1312px] h-[452px] mx-auto text-[20px] font-medium">
+      <div className="lg:mt-[78px] mt-[32px] 2xl:w-[1312px] lg:w-[900px]  w-[343px] md:w-[543px] 2xl:h-[452px] h-[850px] md:h-[500px] lg:h-[300px] mx-auto 2xl:text-[20px] text-[16px] font-medium">
         <h1>
           At ‘VII Leeson’ , We are on a mission to ignite the passion for the
           arts in teenagers by delving into the rich history and extraordinary
@@ -93,7 +105,7 @@ function AboutUs() {
       </div>
       <OurLessons />
       <Testimonial />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

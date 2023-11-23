@@ -3,8 +3,8 @@ import CustomButton from "./CustomButton";
 
 function Share() {
   return (
-    <div>
-      <div className="lg:w-[768px] md:w-[700px] w-[152px] md:h-[110px] h-[75px] md:mt-[90px] mt-[32px] md:mx-auto ml-[16px] p-4 md:p-0 md:border-b border-black">
+    <div className="flex flex-col items-center">
+      <div className="lg:w-[768px] md:w-[700px] w-[344px] bg-white md:h-[110px] h-[75px] md:mt-[90px] mt-[32px] md:mx-auto flex  md:border-b border-black">
         <div className="w-[152px] h-[75px]">
           <h1 className="text-[18px] font-semibold">Share</h1>
           <div className="flex space-x-4 mt-[20px]">

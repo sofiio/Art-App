@@ -1,12 +1,12 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Footer from "../components/Footer";
+// import Header from "../components/Header";
 import Share from "../components/Share";
 import Title from "../components/Title";
 
 function Literature() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Title
         paragraphText="Literature"
         titleText="Words that change the world"
@@ -16,8 +16,8 @@ function Literature() {
         alt=""
         className="mx-auto md:mt-[80px] mt-[16px]"
       />
-      <div className="lg:w-[768px] mb-96 md:w-[700px] md:p-4 lg:p-0 w-[343px] h-[365px] md:mt-[80px] mt-[24px] mx-auto">
-        <h1 className="text-[18px]">
+      <div className="lg:w-[768px] mb-96 md:mb-24 md:w-[700px] w-[343px] h-[365px] md:mt-[80px] mt-[24px] mx-auto">
+        <h1 className="md:text-[18px] text-[16px]">
           In the world of literature, words have the power to move hearts and
           minds. Our classes introduce students to the literary giants who have
           shaped the written word. From the timeless prose of Jane Austen to the
@@ -39,7 +39,7 @@ function Literature() {
         </h1>
       </div>
       <Share />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
