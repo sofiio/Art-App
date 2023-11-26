@@ -26,14 +26,14 @@ function Landing() {
             </h1>
           </div>
           <div className="hidden xl:block">
-          <CustomButton
-            text="View Lessons"
-            width="w-[147px]"
-            height="h-[48px]"
-            marginTop="mt-[48px]"
-            backgroundColor="bg-customColor"
-            hoverEffect="hover:bg-white hover:text-customColor hover:border-customColor "
-          />
+            <CustomButton
+              text="View Lessons"
+              width="w-[147px]"
+              height="h-[48px]"
+              marginTop="mt-[48px]"
+              backgroundColor="bg-customColor"
+              hoverEffect="hover:bg-white hover:text-customColor hover:border-customColor "
+            />
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ function Landing() {
       <OurLessons />
       <UserTestemonials />
       <Faq />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

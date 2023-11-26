@@ -57,10 +57,10 @@ function ContactUsForm() {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-[48px] font-bold mt-[112px]">Contact us</h1>
-      <div className="w-[668px] h-[657px] mt-[48px]">
+      <h1 className="text-[48px] font-bold xl:mt-[112px] mt-16">Contact us</h1>
+      <div className="xl:w-[668px] w-[322px] h-[657px] mt-[48px]">
         <form className="flex flex-col" onSubmit={handleSubmit(submitData)}>
-          <div className="flex">
+          <div className="xl:flex xl:flex-row flex flex-col mx-auto xl:mx-0">
             <div className="flex flex-col space-y-2">
               <label className="font-medium">First name</label>
               <input
@@ -72,7 +72,7 @@ function ContactUsForm() {
                 <span className="text-red-600">{errors.firstName.message}</span>
               )}
             </div>
-            <div className="flex flex-col ml-[24px] space-y-2">
+            <div className="flex flex-col xl:ml-[24px] xl:space-y-2 mt-4 xl:mt-0">
               <label className="font-medium">Last name</label>
               <input
                 type="text"
@@ -84,8 +84,8 @@ function ContactUsForm() {
               )}
             </div>
           </div>
-          <div className="flex mt-[24px]">
-            <div className="flex flex-col space-y-2">
+          <div className="xl:flex xl:flex-row flex flex-col xl:mt-[24px] mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-col xl:space-y-2">
               <label className="font-medium">Email</label>
               <input
                 type="email"
@@ -96,7 +96,7 @@ function ContactUsForm() {
                 <span className="text-red-600">{errors.email.message}</span>
               )}
             </div>
-            <div className="flex flex-col ml-[24px] space-y-2">
+            <div className="flex flex-col xl:ml-[24px] mt-4 xl:mt-0 xl:space-y-2">
               <label className="font-medium">Phone number</label>
               <input
                 type="tel"
@@ -111,11 +111,11 @@ function ContactUsForm() {
             </div>
           </div>
 
-          <label className="mt-[24px] font-medium">Choose a Lesson</label>
+          <label className="xl:mt-[24px] mt-4 font-medium">Choose a Lesson</label>
           <select
             {...register("category")}
             placeholder="Select one..."
-            className="w-[668px] h-[48px] mt-2 border border-black px-2 py-2" // Add 'pl-2' class for left padding
+            className="xl:w-[668px] w-[322px] h-[48px] mt-2 border border-black px-2 py-2 mx-auto" // Add 'pl-2' class for left padding
           >
             <option value="Theatre">Theatre</option>
             <option value="Music">Music</option>
@@ -125,13 +125,13 @@ function ContactUsForm() {
             <span className="text-red-600">{errors.category.message}</span>
           )}
 
-          <div className="w-[668px] h-[212px] mt-[24px] space-y-2">
-            <label className="font-medium">Message</label>
+          <div className="xl:w-[668px] w-[322px] h-[212px] mt-[24px] space-y-2">
+            <label className="font-medium ">Message</label>
             <input
               type="text"
               {...register("message")}
               placeholder="Type your message..."
-              className="w-[668px] h-[180px] border border-black pl-2 flex"
+              className="xl:w-[668px] w-[322px] h-[180px] border border-black pl-2 flex mx-auto xl:mx-0"
             />
             {errors.message && (
               <span className="text-red-600">{errors.message.message}</span>
