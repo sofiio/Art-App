@@ -41,7 +41,7 @@ function Landing() {
       <div className="max-w-[1440px] mx-auto mt-[40px]">
         <div className="2xl:w-[1326px] lg:w-[768px] md:w-[700px] w-[343px] mx-auto xl:flex justify-end hidden">
           <CustomButton
-            text="LEARN MORE 1"
+            text="LEARN MORE"
             font=" font-medium font-sans"
             width="xl:w-[163px] w-[98px]"
             height="xl:h-[163px] h-[98px]"
