@@ -47,7 +47,7 @@ const CustomButton: React.FC<ButtonProps> = ({
           <img
             src={imgSrc}
             alt={imgAlt}
-            className={`mt-[27px] m-auto ${imgHoverEffect}`}
+            className={`xl:mt-[27px] mt-2 m-auto ${imgHoverEffect}`}
           />
         )}
       </button>

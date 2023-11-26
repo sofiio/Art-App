@@ -20,11 +20,12 @@ function Landing() {
           className="w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col mt-[203px] items-center text-white">
-          <div className="w-[848px] h-[141px] flex text-center">
+          <div className="w-[848px] h-[141px] xl:flex text-center hidden">
             <h1 className="font-bold text-[48px] font-quinapple">
               Tomorrow belongs to those who can hear it coming
             </h1>
           </div>
+          <div className="hidden xl:block">
           <CustomButton
             text="View Lessons"
             width="w-[147px]"
@@ -33,19 +34,34 @@ function Landing() {
             backgroundColor="bg-customColor"
             hoverEffect="hover:bg-white hover:text-customColor hover:border-customColor "
           />
+          </div>
         </div>
       </div>
       <Welcome />
       <div className="max-w-[1440px] mx-auto mt-[40px]">
-        <div className="w-[1326px] mx-auto flex justify-end">
+        <div className="2xl:w-[1326px] lg:w-[768px] md:w-[700px] w-[343px] mx-auto xl:flex justify-end hidden">
           <CustomButton
-            text="LEARN MORE"
+            text="LEARN MORE 1"
             font=" font-medium font-sans"
-            width="w-[163px]"
-            height="h-[163px]"
+            width="xl:w-[163px] w-[98px]"
+            height="xl:h-[163px] h-[98px]"
             backgroundColor="bg-customColor"
             rounded="rounded-full"
             imgSrc="/Vector.png"
+            imgHoverEffect="hover:invert"
+            hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
+          />
+        </div>
+        <div className="2xl:w-[1326px] lg:w-[768px] md:w-[700px] w-[343px] mx-auto flex xl:hidden justify-end">
+          <CustomButton
+            text="LEARN MORE"
+            textSize="text-[12px]"
+            font=" font-medium font-sans"
+            width="xl:w-[163px] w-[98px]"
+            height="xl:h-[163px] h-[98px]"
+            backgroundColor="bg-customColor"
+            rounded="rounded-full"
+            imgSrc="/vec.svg"
             imgHoverEffect="hover:invert"
             hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
           />

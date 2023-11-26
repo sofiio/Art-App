@@ -1,12 +1,12 @@
-// import Footer from "../components/Footer";
-// import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Share from "../components/Share";
 import Title from "../components/Title";
 
 function Literature() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Title
         paragraphText="Literature"
         titleText="Words that change the world"
@@ -39,7 +39,7 @@ function Literature() {
         </h1>
       </div>
       <Share />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -21,7 +21,7 @@ const SharedComponent: FC<SharedComponentProps> = ({
       <img
         src={coverImage}
         alt=""
-        className="w-full h-full object-cover md:mx-auto md:mt-[80px] md:w-auto"
+        className="w-full h-full object-cover md:mx-auto md:mt-[80px] mt-[16px] md:w-auto"
       />
       <div className="lg:w-[768px] md:w-[700px] w-[343px] md:mt-[80px] mt-[23px] mx-auto">
         <h1 className="md:text-[18px] text-[16px]">{seperateText}</h1>
@@ -31,7 +31,7 @@ const SharedComponent: FC<SharedComponentProps> = ({
           <img
             src={section.image}
             alt=""
-            className="mx-auto md:mt-[80px] mt-[16px] w-[343px] h-[250px] md:h-auto md:w-auto"
+            className="mx-auto md:mt-[80px] mt-[16px] 2xl:w-auto lg:w-[768px] md:w-[700px] w-[343px] h-[250px] md:h-auto"
           />
           <div className="lg:w-[768px] md:w-[700px] w-[343px] md:mt-[80px] mt-[23px] mx-auto">
             {Array.isArray(section.text) ? (

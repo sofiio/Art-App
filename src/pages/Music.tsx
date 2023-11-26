@@ -1,5 +1,5 @@
-// / import Footer from "../components/Footer";
-// import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Share from "../components/Share";
 import SharedComponent from "../components/SharedComponent";
 import Title from "../components/Title";
@@ -26,7 +26,7 @@ function Music() {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Title paragraphText="Music" titleText="The Soundtrack of planet Earth" />
       <SharedComponent
         sections={sections}
@@ -34,7 +34,7 @@ function Music() {
         seperateText={seperateText}
       />
       <Share />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

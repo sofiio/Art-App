@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import Founders from "../components/AboutUsComponents/Founders";
 import OurTeam from "../components/AboutUsComponents/OurTeam";
 import Testimonial from "../components/AboutUsComponents/Testimonial";
-// import Footer from "../components/Footer";
-// import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import OurLessons from "../components/LandingComponents/OurLessons";
 
 function AboutUs() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="relative">
         <img src="/xxx.png" alt="" className="w-full h-full object-cover" />
         <Link to="/">
@@ -46,17 +46,17 @@ function AboutUs() {
           Edgar Allan Poe, and the rebellious spirit of Miles Davis, David Bowie
           and The Rolling Stones. These iconic figures serve as inspiration for
           our students to find their unique creative voices.
-          <h1 className="mt-2">
+          <span className="mt-2">
             Above all mentioned we would like to talk about the Fame. Certainly,
             fame, in its essence, is a peculiar and multifaceted phenomenon that
             has captivated human society for centuries.
-          </h1>
-          <h1 className="mt-2">
+          </span>
+          <span className="mt-2">
             What makes fame intriguing is its duality. It serves as a coveted
             aspiration for many, symbolizing success, recognition, and the
             fulfillment of dreams. However, the glittering allure of fame often
             masks the challenges and complexities that accompany it.
-          </h1>
+          </span>
         </h1>
       </div>
 
@@ -105,7 +105,7 @@ function AboutUs() {
       </div>
       <OurLessons />
       <Testimonial />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

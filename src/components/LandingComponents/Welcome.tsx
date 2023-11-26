@@ -1,26 +1,42 @@
-
+import CustomButton from "../CustomButton";
 
 function Welcome() {
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="w-[1026px] h-[213px] mt-[94px] ml-[206px] flex flex-col text-center">
-        <h1 className="text-[96px] font-quinapple ">
+      <div className="2xl:w-[1026px] lg:w-[768px] md:w-[700px] w-[343px] 2xl:h-[213px] h-[135px] 2xl:mt-[94px] lg:mt-8 2xl:ml-[206px] flex flex-col lg:text-center text-right mx-auto 2xl:mx-0">
+        <h1 className="2xl:text-[96px] text-[40px] lg:text-[70px] font-quinapple ">
           Welcome To{" "}
           <span className="text-customColor font-quinapple font-semibold">
             VII Lesson{" "}
           </span>
         </h1>
-        <h1 className="text-[64px] font-custom1">
+        <h1 className="2xl:text-[64px] text-[32px] font-custom1">
           Where History Comes Alive
         </h1>
       </div>
-
-      <div className="flex ml-[54px] mt-[94px]">
-        <img src="/sample.png" alt="" className="h-[510px] w-[877px]" />
+      <div className="2xl:w-[1326px] xl:hidden lg:w-[768px] md:w-[700px] w-[343px] mx-auto flex justify-center mt-20">
+        <CustomButton
+          text=""
+          font=" font-medium font-sans"
+          width="2xl:w-[163px] w-[98px]"
+          height="2xl:h-[163px] h-[98px]"
+          backgroundColor="bg-customColor"
+          rounded="rounded-full"
+          imgSrc="/seven.png"
+          imgHoverEffect="hover:invert"
+          hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
+        />
+      </div>
+      <div className="lg:flex lg:flex-row flex flex-col 2xl:ml-[54px] mt-[94px] 2xl:w-[1312px] lg:w-[768px] md:w-[700px] w-[343px] mx-auto">
+        <img
+          src="/sample.png"
+          alt=""
+          className="2xl:h-[510px] lg:h-[400px] h-[200px] 2xl:w-[877px] lg:w-[450px] w-[343px] mx-auto 2xl:mx-0"
+        />
         <img
           src="/sample1.png"
           alt=""
-          className="ml-[34px] h-[510px] w-[421px]"
+          className="2xl:ml-[34px] 2xl:h-[510px] lg:h-[400px] 2xl:w-[421px] lg:w-[300px] w-[343px] h-[402px] mt-4 lg:mt-0 mx-auto 2xl:mx-0"
         />
       </div>
     </div>

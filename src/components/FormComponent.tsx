@@ -24,14 +24,14 @@ const FormComponent: React.FC = () => {
             value={email}
             onChange={handleEmailChange}
             placeholder="Enter your email"
-            className="border border-black p-2 w-[400px]"
+            className="border border-black p-2 2xl:w-[400px] xl:w-[250px] md:w-[400px] w-[205px]"
             required
           />
         </div>
         <div>
           <CustomButton
             text="Send"
-            width="w-[84px]"
+            width="xl:w-[84px] w-[122px]"
             height="h-[43px]"
             marginTop="mt-0"
             backgroundColor="bg-black"
