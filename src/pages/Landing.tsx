@@ -8,10 +8,12 @@ import OurMission from "../components/LandingComponents/OurMission";
 import OutTeam from "../components/LandingComponents/OutTeam";
 import UserTestemonials from "../components/LandingComponents/UserTestemonials";
 import Welcome from "../components/LandingComponents/Welcome";
+// import { useRef } from "react";
+import { Link } from "react-scroll";
 
 function Landing() {
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto" id="Landing">
       <Header />
       <div className="relative">
         <img
@@ -26,14 +28,22 @@ function Landing() {
             </h1>
           </div>
           <div className="hidden xl:block">
-            <CustomButton
-              text="View Lessons"
-              width="w-[147px]"
-              height="h-[48px]"
-              marginTop="mt-[48px]"
-              backgroundColor="bg-customColor"
-              hoverEffect="hover:bg-white hover:text-customColor hover:border-customColor "
-            />
+            <Link
+              to="OurLessons"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+            >
+              <CustomButton
+                text="View Lessons"
+                width="w-[147px]"
+                height="h-[48px]"
+                marginTop="mt-[48px]"
+                backgroundColor="bg-customColor"
+                hoverEffect="hover:bg-white hover:text-customColor hover:border-customColor "
+              />
+            </Link>
           </div>
         </div>
       </div>

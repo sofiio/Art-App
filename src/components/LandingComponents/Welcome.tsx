@@ -1,4 +1,5 @@
 import CustomButton from "../CustomButton";
+import { Link } from "react-scroll";
 
 function Welcome() {
   return (
@@ -15,17 +16,25 @@ function Welcome() {
         </h1>
       </div>
       <div className="2xl:w-[1326px] xl:hidden lg:w-[768px] md:w-[700px] w-[343px] mx-auto flex justify-center mt-20">
-        <CustomButton
-          text=""
-          font=" font-medium font-sans"
-          width="2xl:w-[163px] w-[98px]"
-          height="2xl:h-[163px] h-[98px]"
-          backgroundColor="bg-customColor"
-          rounded="rounded-full"
-          imgSrc="/seven.png"
-          imgHoverEffect="hover:invert"
-          hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
-        />
+        <Link
+          to="OurLessons"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
+          <CustomButton
+            text=""
+            font=" font-medium font-sans"
+            width="2xl:w-[163px] w-[98px]"
+            height="2xl:h-[163px] h-[98px]"
+            backgroundColor="bg-customColor"
+            rounded="rounded-full"
+            imgSrc="/seven.png"
+            imgHoverEffect="hover:invert"
+            hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
+          />
+        </Link>
       </div>
       <div className="lg:flex lg:flex-row flex flex-col mt-[94px] 2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto">
         <img
