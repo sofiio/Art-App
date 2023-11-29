@@ -39,7 +39,7 @@ function Landing() {
       </div>
       <Welcome />
       <div className="max-w-[1440px] mx-auto mt-[40px]">
-        <div className="2xl:w-[1326px] lg:w-[768px] md:w-[700px] w-[343px] mx-auto xl:flex justify-end hidden">
+        <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto xl:flex justify-end hidden">
           <CustomButton
             text="LEARN MORE"
             font=" font-medium font-sans"

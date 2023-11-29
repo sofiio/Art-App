@@ -1,10 +1,10 @@
 function ChooseUs() {
   return (
     <div className="max-w-[1440px] mx-auto items-center">
-      <div className="2xl:ml-[57px] xl:h-[115px] h-[70px] 2xl:w-[1326px] lg:w-[768px] md:w-[700px] w-[343px] mt-[87px] flex text-center justify-center mx-auto 2xl:mx-0">
+      <div className="2xl:ml-[57px] xl:h-[115px] h-[70px] 2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mt-[87px] flex text-center justify-center mx-auto 2xl:mx-0">
         <h1 className="xl:text-[96px] text-[24px] font-quinapple font-black xl:font-normal">WHY CHOOSE US</h1>
       </div>
-      <div className="2xl:w-[1332px] lg:w-[768px] md:w-[700px] w-[326px] xl:flex xl:flex-row flex flex-col xl:mt-[66px] h-[496px] mx-auto">
+      <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 xl:flex xl:flex-row flex flex-col xl:mt-[66px] h-[496px] mx-auto">
         <div className="xl:w-[548px] w-[326px] h-[496px] flex relative mx-auto 2xl:mx-0">
           <img src="/sa.png" alt="" className="xl:w-[372px] xl:h-[372px] w-[233px] h-[233px]" />
           <img

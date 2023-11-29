@@ -10,7 +10,7 @@ type FormData = {
   mobilePhone?: string;
   // mobilePhone?: string | null; // Making it optional
   message: string;
-  category: string;
+  chooseLasson: string;
   termsCheckbox: boolean;
 };
 
@@ -27,7 +27,7 @@ function ContactUsForm() {
         "Invalid phone number. Please enter a 10-digit number without spaces or dashes.",
     }),
     message: z.string().min(10).max(300),
-    category: z
+    chooseLasson: z
       .string()
       .refine((value) => ["Theatre", "Music", "Literature"].includes(value), {
         message: "Invalid category.",
@@ -49,11 +49,41 @@ function ContactUsForm() {
     setIsChecked(!isChecked);
   };
 
-  const submitData = (data: FormData) => {
-    console.log("IT WORKED", data);
-    // Add any additional logic or API calls if needed
-    setShowConfirmation(true); // Set the state to show the confirmation message
+  const submitData = async (data: FormData) => {
+  // Transform form data to match the desired structure
+  const postData = {
+    data: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        mobilePhone: data.mobilePhone,
+        chooseLasson: data.chooseLasson,
+        message: data.message,
+        termsCheckbox: data.termsCheckbox,
+      }, 
   };
+
+  try {
+    const response = await fetch('http://localhost:1337/api/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    });
+  
+    if (response.ok) {
+      // Handle success, e.g., show confirmation message
+      setShowConfirmation(true);
+    } else {
+      // Handle error, e.g., show error message
+      console.error('Error submitting form');
+    }
+  } catch (error) {
+    // Handle network error
+    console.error('Network error:', error);
+  }
+};
 
   return (
     <div className="flex flex-col items-center">
@@ -113,7 +143,7 @@ function ContactUsForm() {
 
           <label className="xl:mt-[24px] mt-4 font-medium">Choose a Lesson</label>
           <select
-            {...register("category")}
+            {...register("chooseLasson")}
             placeholder="Select one..."
             className="xl:w-[668px] w-[322px] h-[48px] mt-2 border border-black px-2 py-2 mx-auto" // Add 'pl-2' class for left padding
           >
@@ -121,8 +151,8 @@ function ContactUsForm() {
             <option value="Music">Music</option>
             <option value="Literature">Literature</option>
           </select>
-          {errors.category && (
-            <span className="text-red-600">{errors.category.message}</span>
+          {errors.chooseLasson && (
+            <span className="text-red-600">{errors.chooseLasson.message}</span>
           )}
 
           <div className="xl:w-[668px] w-[322px] h-[212px] mt-[24px] space-y-2">
@@ -168,6 +198,7 @@ function ContactUsForm() {
               type="submit"
               value="Done"
               className="w-[85px] h-[48px] mt-[24px] bg-black text-white"
+             
             />
           </div>
         </form>

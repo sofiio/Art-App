@@ -11,7 +11,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
 }: TestimonialProps) => {
   return (
     <>
-      <div className="xl:w-[400px] w-[294px] xl:h-[310px] h-[348px] bg-CardColor rounded-[12px] border border-black">
+      <div className="xl:w-[416px] w-[294px] xl:h-[310px] h-[348px] bg-CardColor rounded-[12px] border border-black">
         <div className="flex space-x-2 mt-[32px] xl:ml-[32px] ml-[24px]">
           {Array.from({ length: 5 }, (_, index) => (
             <img key={index} src="/color.svg" alt={`Color ${index + 1}`} />

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       <div className=" w-full h-[542px] mx-auto bg-white">
-        <div className="2xl:w-[1312px] lg:w-[768px] md:w-[700px] mx-auto">
+        <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto">
           <div className="h-[408px] xl:border-b border-black xl:flex xl:flex-row pt-[80px]">
             <div className="2xl:w-[500px] w-[343px] md:w-[700px] h-[223px] space-y-4 mx-auto xl:mx-0">
               <h1 className="xl:text-[18px] text-[16px] font-bold">Logo</h1>

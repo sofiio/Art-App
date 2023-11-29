@@ -1,7 +1,7 @@
 function OurMission() {
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="flex xl:mt-[239px] mt-[900px] mx-auto 2xl:w-[1332px] lg:w-[768px] md:w-[700px] w-[327px]">
+      <div className="flex xl:mt-[239px] mt-[900px] mx-auto 2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0  justify-center">
         <div className="2xl:w-[616px] lg:w-[768px] md:w-[700px] w-[343px] h-[409px] flex flex-col items-center 2xl:items-start">
           <h1 className="2xl:text-[64px] text-[23px] font-black 2xl:font-normal font-quinapple">
             OUR MISSION

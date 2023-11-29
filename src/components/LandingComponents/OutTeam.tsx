@@ -1,7 +1,7 @@
 function OutTeam() {
   return (
     <div className="w-full bg-gradient-to-b from-GradientColor/100 via-GradientColor/30  to-GradientColor/0">
-      <div className="2xl:w-[1440px] lg:w-[768px] md:w-[700px] w-[375px] mt-[212px] mx-auto xl:h-[732px] h-[789px] flex flex-col items-center ">
+      <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4  mt-[212px] mx-auto xl:h-[732px] h-[789px] flex flex-col items-center ">
         <h1 className="xl:mt-[84px] font-black xl:font-normal mt-[20px] xl:text-[64px] text-[32px] font-quinapple">
           OUR TEAM
         </h1>
