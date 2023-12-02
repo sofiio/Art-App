@@ -5,6 +5,7 @@ import Theatre from "./pages/Theatre";
 import Literature from "./pages/Literature";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import Syllabus from "./pages/Syllabus";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/Literature" element={<Literature/>} />
       <Route path="/AboutUs" element={<AboutUs/>} />
       <Route path="/ContactUs" element={<ContactUs/>} />
+      <Route path="/Syllabus" element={<Syllabus/>} />
       </Routes>
     </BrowserRouter>
     </>

@@ -20,7 +20,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
       <div
         className={
           props.nav
-            ? "bg-white fixed top-0 left-0 w-[300px] h-screen z-10 "
+            ? "bg-white fixed top-0 right-0 w-[300px] h-screen z-10 "
             : "bg-white fixed top-0 left-[-100%] w-[300px] h-screen z-10 "
         }
       >
