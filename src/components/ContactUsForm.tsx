@@ -50,9 +50,9 @@ function ContactUsForm() {
   };
 
   const submitData = async (data: FormData) => {
-  // Transform form data to match the desired structure
-  const postData = {
-    data: {
+    // Transform form data to match the desired structure
+    const postData = {
+      data: {
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
@@ -60,30 +60,30 @@ function ContactUsForm() {
         chooseLasson: data.chooseLasson,
         message: data.message,
         termsCheckbox: data.termsCheckbox,
-      }, 
-  };
-
-  try {
-    const response = await fetch('http://localhost:1337/api/contacts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(postData),
-    });
-  
-    if (response.ok) {
-      // Handle success, e.g., show confirmation message
-      setShowConfirmation(true);
-    } else {
-      // Handle error, e.g., show error message
-      console.error('Error submitting form');
+    };
+
+    try {
+      const response = await fetch("http://localhost:1337/api/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+      });
+
+      if (response.ok) {
+        // Handle success, e.g., show confirmation message
+        setShowConfirmation(true);
+      } else {
+        // Handle error, e.g., show error message
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      // Handle network error
+      console.error("Network error:", error);
     }
-  } catch (error) {
-    // Handle network error
-    console.error('Network error:', error);
-  }
-};
+  };
 
   return (
     <div className="flex flex-col items-center">
@@ -141,7 +141,9 @@ function ContactUsForm() {
             </div>
           </div>
 
-          <label className="xl:mt-[24px] mt-4 font-medium">Choose a Lesson</label>
+          <label className="xl:mt-[24px] mt-4 font-medium">
+            Choose a Lesson
+          </label>
           <select
             {...register("chooseLasson")}
             placeholder="Select one..."
@@ -198,7 +200,6 @@ function ContactUsForm() {
               type="submit"
               value="Done"
               className="w-[85px] h-[48px] mt-[24px] bg-black text-white"
-             
             />
           </div>
         </form>

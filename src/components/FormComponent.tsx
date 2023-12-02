@@ -1,47 +1,79 @@
-import React, { useState } from "react";
-import CustomButton from "./CustomButton";
-const FormComponent: React.FC = () => {
-  const [email, setEmail] = useState<string>("");
+import { z, ZodType } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
+type FormData = {
+  email: string;
+};
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Email submitted:", email);
+function FormComponent() {
+  const schema: ZodType<FormData> = z.object({
+    email: z.string().email(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  const submitedData = async (data: FormData) => {
+    // Transform form data to match the desired structure
+    const postData = {
+      data: {
+        userEmail: data.email,
+      },
+    };
+
+    try {
+      const response = await fetch("http://localhost:1337/api/user-emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+      });
+
+      if (response.ok) {
+        // Handle success, e.g., show confirmation message
+        console.log("submited");
+      } else {
+        // Handle error, e.g., show error message
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      // Handle network error
+      console.error("Network error:", error);
+    }
   };
 
   return (
-    <div className="">
-      <form onSubmit={handleFormSubmit} className="flex">
-        <div>
+    <div className="flex flex-col 2xl:items-center items-start">
+      <form className="flex " onSubmit={handleSubmit(submitedData)}>
+        <div className="flex flex-col xl:space-y-2">
           <input
             type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Enter your email"
+            {...register("email")}
             className="border border-black p-2 2xl:w-[400px] xl:w-[250px] md:w-[400px] w-[205px]"
-            required
+            placeholder="Enter your email"
           />
+          {errors.email && (
+            <span className="text-red-600">{errors.email.message}</span>
+          )}
         </div>
-        <div>
-          <CustomButton
-            text="Send"
-            width="xl:w-[84px] w-[122px]"
-            height="h-[43px]"
-            marginTop="mt-0"
-            backgroundColor="bg-black"
-            hoverEffect="hover:bg-customColor"
-            marginLeft="ml-[16px]"
+
+        <div className="mx-auto flex flex-col items-center">
+          <input
+            type="submit"
+            value="Send"
+            className="xl:w-[84px] ml-[16px] w-[122px] hover:bg-customColor h-[43px] mt-0 bg-black text-white"
           />
         </div>
       </form>
     </div>
   );
-};
+}
 
 export default FormComponent;
