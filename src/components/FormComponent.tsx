@@ -68,7 +68,7 @@ function FormComponent() {
           <input
             type="submit"
             value="Send"
-            className="xl:w-[84px] ml-[16px] w-[122px] hover:bg-customColor h-[43px] mt-0 bg-black text-white"
+            className="xl:w-[84px] ml-[16px] w-[122px] hover:bg-customColor h-[43px] mt-0 xl:bg-black bg-white xl:text-white"
           />
         </div>
       </form>

@@ -24,7 +24,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
       />
       <div className="flex flex-row md:flex md:flex-col justify-between md:justify-start items-center md:items-start mt-[12px] lg:mt-0">
         <h1
-          className={`2xl:mt-[24px] md:text-[24px] text-[16px] font-bold font-quinapple ${marginLeft}`}
+          className={`2xl:mt-[24px] md:text-[24px] text-[16px] font-bold text-white font-quinapple ${marginLeft}`}
         >
           {h1Text}
         </h1>
@@ -39,6 +39,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
           textSize="text-[14px]"
           font="font-semibold"
           hoverEffect="hover:bg-customColor/10"
+          border="border-none"
         />
       </div>
     </div>

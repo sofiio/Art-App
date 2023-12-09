@@ -45,7 +45,7 @@ function Header() {
           className="w-[39px] h-[39px] block xl:hidden"
           onClick={() => setNav(true)}
         >
-          <img src="/burger.svg" alt="" />
+          <img src="/burger.svg" alt="" className=" cursor-pointer" />
         </div>
       </div>
       <HamburgerMenu nav={nav} setNav={setNav} />

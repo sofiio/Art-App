@@ -12,7 +12,7 @@ function Literature() {
         titleText="Words that change the world"
       />
       <img
-        src="/literature.png"
+        src="/litcover.png"
         alt=""
         className="mx-auto md:mt-[80px] mt-[16px]"
       />

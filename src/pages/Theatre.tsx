@@ -18,7 +18,7 @@ function Theatre() {
     },
   ];
 
-  const coverImage = "/theatre1.png";
+  const coverImage = "/theatrecover.png";
   const seperateText =
     "Theater is a vibrant art form that has enchanted audiences for centuries. Our classes delve into the captivating history of theater, exploring the evolution of acting techniques and the iconic performers who brought characters to life. From the timeless works of Shakespeare to the avant-garde productions of today, our students gain a deeper appreciation for the power of the stage.";
 

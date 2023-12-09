@@ -20,7 +20,7 @@ function Music() {
   ];
 
   // Use the coverImage from the first section
-  const coverImage = "/mus.png";
+  const coverImage = "/muscover.png";
   const seperateText =
     "Music transcends time and culture, touching our souls in ways words cannot. Our classes explore the evolution of music, from classical maestros like Bach to rock legends like Jimi Hendrix. We study the revolutionary lyrics of Bob Dylan and the electrifying performances of Led Zeppelin, understanding how music has both reflected and shaped the world.";
 
