@@ -17,14 +17,17 @@ const LassionCard: React.FC<LassionCardProps> = ({
 }: LassionCardProps) => {
   return (
     <div className="w-[327px] h-[238px] 2xl:w-auto 2xl:h-auto">
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        className="w-[416px] h-[238px] lg:h-[300px]"
-      />
+      <div className="relative overflow-hidden inline-block rounded-[12px]">
+        <img
+          src={imgSrc}
+          alt={imgAlt}
+          className="block w-full h-full  transition-transform duration-300 ease-in-out transform scale-100 hover:scale-105"
+        />
+        <div className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 ease-in-out bg-gradient-to-t from-blue-300 via-blue-200 to-transparent hover:opacity-50 rounded-lg"></div>
+      </div>
       <div className="flex flex-row md:flex md:flex-col justify-between md:justify-start items-center md:items-start mt-[12px] lg:mt-0">
         <h1
-          className={`2xl:mt-[24px] md:text-[24px] text-[16px] font-bold text-white font-quinapple ${marginLeft}`}
+          className={`2xl:mt-[20px] md:text-[24px] text-[16px] font-bold text-white font-quinapple ${marginLeft}`}
         >
           {h1Text}
         </h1>
