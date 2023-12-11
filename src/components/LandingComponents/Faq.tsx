@@ -11,7 +11,7 @@ function Faq() {
           </h1>
         </div>
         <div className="md:w-[700px] lg:w-[768px] flex flex-col items-center md:items-start  w-[343px] space-y-4 xl:space-y-0 h-[365px] mt-[32px] md:mt-[80px]">
-          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] md:justify-between justify-around border-b-2 border-gray-500">
+          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
             <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
               Question text goes here
             </h1>
@@ -26,7 +26,7 @@ function Faq() {
               className="w-[32px] h-[32px] block md:hidden"
             ></img>
           </div>
-          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] justify-around items-center md:justify-between border-b-2 border-gray-500">
+          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] justify-around items-center sm:justify-between border-b-2 border-gray-500 sm:px-4 md:px-0">
             <h1 className="md:text-[18px] text-[12px] font-bold">
               Question text goes here
             </h1>
@@ -41,7 +41,7 @@ function Faq() {
               className="w-[32px] h-[32px] block md:hidden"
             ></img>
           </div>
-          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] md:justify-between items-center justify-around border-b-2 border-gray-500">
+          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] sm:justify-between items-center justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
             <h1 className="md:text-[18px] text-[12px] font-bold">
               Question text goes here
             </h1>
@@ -56,7 +56,7 @@ function Faq() {
               className="w-[32px] h-[32px] block md:hidden"
             ></img>
           </div>
-          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px]  items-center justify-around md:justify-between border-b-2 border-gray-500">
+          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px]  items-center justify-around sm:justify-between border-b-2 border-gray-500 sm:px-4 md:px-0">
             <h1 className="md:text-[18px] text-[12px] font-bold">
               Question text goes here
             </h1>
@@ -71,7 +71,7 @@ function Faq() {
               className="w-[32px] h-[32px] block md:hidden"
             ></img>
           </div>
-          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] items-center justify-around md:justify-between border-b-2 border-gray-500">
+          <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white xl:pt-[12px] items-center justify-around sm:justify-between border-b-2 border-gray-500 sm:px-4 md:px-0">
             <h1 className="md:text-[18px] text-[12px] font-bold">
               Question text goes here
             </h1>

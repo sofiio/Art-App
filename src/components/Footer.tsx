@@ -19,7 +19,7 @@ function Footer({
   return (
     <>
       <div
-        className={`w-full h-[542px] mx-auto bg-${mobileBgColor} bottom-0 md:bg-white`}
+        className={`w-full xl:h-[542px] h-[650px] mx-auto bg-${mobileBgColor} md:bg-white absolute`}
       >
         <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto">
           <div className="h-[408px] xl:border-b xl:flex xl:flex-row pt-[80px]">
@@ -34,17 +34,17 @@ function Footer({
                 theater, literature, and music? Join Us Today!{" "}
               </h1>
               <FormComponent />
-              <h1 className={`text-[12px] text-black text-${textColor}`}>
+              <h1 className={`text-[12px] md:text-black text-${textColor}`}>
                 By subscribing you agree to with our{" "}
                 <span
-                  className={`underline cursor-pointer text-black text-${textColor}`}
+                  className={`underline cursor-pointer md:text-black text-${textColor}`}
                 >
                   Privacy Policy
                 </span>{" "}
                 and provide consent to receive updates from our company.
               </h1>
             </div>
-            <div className="flex flex-row mt-[47px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
+            <div className="flex flex-row mt-[25px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] font-sans text-[14px] flex flex-col space-y-4">
                 <Link to="/AboutUs">
                   <h1 className={`mt-4 md:text-black text-${textColor}`}>
@@ -167,11 +167,10 @@ function Footer({
             </div>
           </div>
         </div>
+        <h1 className="text-[14px] xl:hidden mt-[150px] flex items-center justify-center text-black">
+          © 2023.All rights reserved.
+        </h1>
       </div>
-
-      <h1 className="text-[14px] xl:hidden mt-20 xl:mb-6 pb-12 flex items-center justify-center text-black">
-        © 2023.All rights reserved.
-      </h1>
     </>
   );
 }

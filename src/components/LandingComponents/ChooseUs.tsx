@@ -6,7 +6,7 @@ function ChooseUs() {
           WHY CHOOSE US
         </h1>
       </div>
-      <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 xl:flex xl:flex-row flex flex-col lg:mt-[66px] md:mt-[80px] h-[496px] mx-auto">
+      <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 xl:flex xl:flex-row flex flex-col lg:mt-[66px] md:mt-[80px] sm:mt-[40px] h-[496px] mx-auto">
         <div className="xl:w-[548px] w-[326px] h-[496px] flex relative mx-auto 2xl:mx-0">
           <img
             src="/sa.png"

@@ -13,7 +13,7 @@ import { Link } from "react-scroll";
 
 function Landing() {
   return (
-    <div className="w-full mx-auto bg-black" id="Landing">
+    <div className="w-full mx-auto bg-black relative" id="Landing">
       <Header />
       <div className="relative sm:h-[346px] h-[300px] md:h-[500px] xl:h-[570px] lg:h-[550px] overflow-hidden">
         <div className="">
