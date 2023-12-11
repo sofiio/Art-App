@@ -19,12 +19,12 @@ function ChooseUs() {
             className="xl:mt-[147px] mt-[94px] xl:ml-[197px] ml-[124px] 2xl:w-[351px] xl:w-[300px] xl:h-[300px] 2xl:h-[349px] w-[219px] h-[219px] absolute top-0 left-0"
           />
         </div>
-        <div className="md:w-[717px] w-[321px] md:h-[480px] mx-auto md:mx-0 h-[812px] lg:ml-[68px] mt-36 md:mt-0 ">
-          <div className="md:w-[717px] w-[326px] h-[90px] flex items-center md:mt-28 xl:mt-0">
+        <div className="md:w-[717px] sm:w-[500px] w-[321px] md:h-[480px] mx-auto md:mx-0 h-[812px] lg:ml-[68px] mt-36 md:mt-0 ">
+          <div className="md:w-[717px] sm:w-[500px] w-[326px] h-[90px] flex items-center md:mt-28 xl:mt-0">
             <div>
               <img src="/frame.svg" alt="" className="m-auto" />
             </div>
-            <div className="ml-[24px] md:w-[605px] w-[232px] h-[90px]">
+            <div className="ml-[24px] md:w-[605px] sm:w-[500px] w-[232px] h-[90px]">
               <h1 className="text-[24px] font-black text-white font-quinapple">
                 INTERACTIVE LEARNING
               </h1>
@@ -35,11 +35,11 @@ function ChooseUs() {
               </h1>
             </div>
           </div>
-          <div className="md:w-[717px] w-[326px] h-[90px] md:mt-[40px] mt-[140px] flex items-center">
+          <div className="md:w-[717px] sm:w-[500px] w-[326px] h-[90px] md:mt-[40px] sm:mt-[60px] mt-[140px] flex items-center">
             <div>
               <img src="/second.svg" alt="" className="m-auto" />
             </div>
-            <div className="ml-[24px] md:w-[605px] w-[232px] h-[90px]">
+            <div className="ml-[24px] md:w-[605px] sm:w-[500px] w-[232px] h-[90px]">
               <h1 className="text-[24px] font-black text-white font-quinapple">
                 INSPIRING INSTRUCTIONS
               </h1>
@@ -50,11 +50,11 @@ function ChooseUs() {
               </h1>
             </div>
           </div>
-          <div className="md:w-[717px] w-[326px] h-[90px] md:mt-[40px] mt-[170px] flex items-center">
+          <div className="md:w-[717px] sm:w-[500px] w-[326px] h-[90px] md:mt-[40px] sm:mt-[60px] mt-[170px] flex items-center">
             <div>
               <img src="/third.svg" alt="" className="m-auto" />
             </div>
-            <div className="ml-[24px] md:w-[605px] w-[232px] h-[90px]">
+            <div className="ml-[24px] md:w-[605px] sm:w-[500px] w-[232px] h-[90px]">
               <h1 className="text-[24px] font-black text-white font-quinapple">
                 CREATIVE FREEDOM
               </h1>
@@ -65,11 +65,11 @@ function ChooseUs() {
               </h1>
             </div>
           </div>
-          <div className="md:w-[717px] w-[326px] h-[90px] md:mt-[40px] mt-[140px] flex items-center">
+          <div className="md:w-[717px] w-[326px] sm:w-[500px] h-[90px] md:mt-[40px] sm:mt-[60px] mt-[140px] flex items-center">
             <div>
               <img src="/fourth.svg" alt="" className="m-auto" />
             </div>
-            <div className="ml-[24px] md:w-[605px] w-[232px] h-[90px]">
+            <div className="ml-[24px] md:w-[605px] sm:w-[500px] w-[232px] h-[90px]">
               <h1 className="text-[24px] font-black text-white font-quinapple">
                 COMMUNITY
               </h1>

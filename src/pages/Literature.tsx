@@ -16,7 +16,7 @@ function Literature() {
         alt=""
         className="mx-auto md:mt-[80px] mt-[16px]"
       />
-      <div className="lg:w-[768px] mb-96 md:mb-24 md:w-[700px] w-[343px] h-[365px] md:mt-[80px] mt-[24px] mx-auto">
+      <div className="lg:w-[768px] mb-96 md:mb-24 md:w-[700px] w-[343px] sm:w-[500px] h-[365px] md:mt-[80px] mt-[24px] mx-auto">
         <h1 className="md:text-[18px] text-[16px]">
           In the world of literature, words have the power to move hearts and
           minds. Our classes introduce students to the literary giants who have
@@ -39,7 +39,12 @@ function Literature() {
         </h1>
       </div>
       <Share />
-      <Footer />
+      <Footer
+        mobileBgColor="white"
+        textColor="black"
+        hideFirstImageMobile={false}
+        SecondImageMobile={true}
+      />
     </>
   );
 }

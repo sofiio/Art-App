@@ -34,7 +34,12 @@ function Music() {
         seperateText={seperateText}
       />
       <Share />
-      <Footer />
+      <Footer
+        mobileBgColor="white"
+        textColor="black"
+        hideFirstImageMobile={false}
+        SecondImageMobile={true}
+      />
     </>
   );
 }

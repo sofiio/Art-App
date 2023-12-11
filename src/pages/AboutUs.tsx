@@ -105,7 +105,12 @@ function AboutUs() {
       </div>
       <OurLessons />
       <Testimonial />
-      <Footer />
+      <Footer
+        mobileBgColor="white"
+        textColor="black"
+        hideFirstImageMobile={false}
+        SecondImageMobile={true}
+      />
     </>
   );
 }

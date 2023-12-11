@@ -15,19 +15,19 @@ function Landing() {
   return (
     <div className="w-full mx-auto bg-black" id="Landing">
       <Header />
-      <div className="relative ">
-        <div className="relative ">
+      <div className="relative sm:h-[346px] h-[300px] md:h-[500px] xl:h-[570px] lg:h-[550px] overflow-hidden">
+        <div className="">
           <img
             src="/airb.png"
             alt=""
-            className="w-full xl:h-full h-[386px] md:h-[500px] object-cover"
+            className="w-full xl:h-full h-[280px] sm:h-[320px] md:h-[500px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 xl:hidden"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
         </div>
 
-        <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col mt-[175px] md:mt-[200px] xl:justify-center xl:mt-[110px] items-center text-white">
-          <div className="xl:w-[1237px] w-[375px] md:w-[747px] h-[70px] flex text-center">
-            <h1 className="font-bold xl:text-[48px] text-[24px] md:text-[40px] font-quinapple">
+        <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col mt-[120px] sm:mt-[135px] md:mt-[220px] xl:justify-center xl:mt-[110px] items-center text-white">
+          <div className="xl:w-[1237px] w-[375px] md:w-[747px] sm:w-[500px] h-[70px] flex text-center">
+            <h1 className="font-bold xl:text-[48px] text-[24px] md:text-[40px] sm:text-[28px] font-quinapple">
               Tomorrow belongs to those who can hear it coming
             </h1>
           </div>
@@ -60,7 +60,12 @@ function Landing() {
       <OurLessons />
       <UserTestemonials />
       <Faq />
-      <Footer />
+      <Footer
+        mobileBgColor="black"
+        textColor="white"
+        hideFirstImageMobile={true}
+        SecondImageMobile={false}
+      />
     </div>
   );
 }

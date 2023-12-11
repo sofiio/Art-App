@@ -10,7 +10,7 @@ function OurLessons() {
       <h1 className="text-white md:mt-[350px] xl:mt-[50px] md:text-[48px] text-[32px] font-bold font-quinapple">
         OUR LESSONS
       </h1>
-      <div className="2xl:w-[1312px] xl:w-[1100px] w-[375px] md:w-[747px] h-[451px] 2xl:mt-[80px] xl:mt-[20px] mt-4 flex overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
+      <div className="2xl:w-[1312px] xl:w-[1100px] w-[375px] md:w-[747px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[20px] mt-4 flex overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
         <Link to="/Music">
           <div className="">
             <LassionCard

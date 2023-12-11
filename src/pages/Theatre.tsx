@@ -32,7 +32,12 @@ function Theatre() {
       <SharedComponent sections={sections} coverImage={coverImage}
         seperateText={seperateText} />
       <Share />
-      <Footer />
+      <Footer
+        mobileBgColor="white"
+        textColor="black"
+        hideFirstImageMobile={false}
+        SecondImageMobile={true}
+      />
     </>
   );
 }
