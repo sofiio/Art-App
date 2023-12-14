@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CustomButton from "../CustomButton";
-// import {fbImg} from 'Vector.png'
 
 function LearnMore() {
   return (
@@ -8,17 +7,15 @@ function LearnMore() {
       <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto md:flex justify-end hidden">
         <Link to="/AboutUs">
           <CustomButton
-            // onEn={set}
             text="LEARN MORE"
             border="border-none"
-            font=" font-medium font-sans"
+            font="font-medium font-sans"
             width="md:w-[163px] w-[98px]"
             height="md:h-[163px] h-[98px]"
             backgroundColor="bg-customColor"
             rounded="rounded-full"
-            // imgSrc={isEnter ? }
-            imgHoverEffect="hover:invert"
-            hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
+            imgSrc="/vet.svg"
+            hoverEffect="hover:bg-white hover:text-black hover:border hover:border-black"
           />
         </Link>
       </div>
@@ -34,8 +31,7 @@ function LearnMore() {
             rounded="rounded-full"
             imgSrc="/vec.svg"
             border="border-none"
-            imgHoverEffect="hover:invert"
-            hoverEffect="hover:bg-white  hover:text-black hover:border hover:border-black"
+            hoverEffect="hover:bg-white hover:text-black hover:border hover:border-black"
           />
         </Link>
       </div>

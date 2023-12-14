@@ -32,22 +32,29 @@ const CustomButton: React.FC<ButtonProps> = ({
   textSize = "text-[16px]",
   imgSrc,
   imgAlt = "",
-  imgHoverEffect = "hover:invert",
   font = "font-regular",
   hoverEffect = "hover:bg-blue-700", // default hover effect
   onClick,
 }: ButtonProps) => {
   const buttonStyle = `${width} ${font} ${textColor} ${marginLeft} ${textSize} ${height} ${marginTop} ${rounded} ${hoverEffect} ${backgroundColor} ${border} border`;
 
+  const [isHovered, setIsHovered] = React.useState(false);
   return (
     <div>
-      <button className={buttonStyle} onClick={onClick}>
+      <button
+        className={buttonStyle}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={onClick}
+      >
         {text}
         {imgSrc && (
           <img
             src={imgSrc}
             alt={imgAlt}
-            className={`md:mt-[27px] mt-2 m-auto ${imgHoverEffect}`}
+            className={`md:mt-[27px] mt-2 m-auto ${
+              isHovered ? "filter invert" : "" // Apply filter on hover
+            }`}
           />
         )}
       </button>
