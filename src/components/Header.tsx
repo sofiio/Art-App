@@ -7,15 +7,15 @@ function Header() {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className="font-sans sticky border-b border-black top-0 z-10 w-full h-[55px] xl:h-[72px] mx-auto xl:bg-white bg-black ">
+    <div className="font-sans sticky border-b border-black top-0 z-10 w-full h-[55px] xl:h-[72px] mx-auto bg-black ">
       <div
         className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0
        flex mx-auto justify-between items-center h-full"
       >
         <Link to="/">
-          <div className="text-white xl:text-black">logo</div>
+        <img src="/logo.png" alt="" />
         </Link>
-        <div className="hidden xl:flex items-center space-x-[32px] text-black text-[16px]">
+        <div className="hidden xl:flex items-center space-x-[32px] text-white text-[16px]">
           <Link to="/">
             <h1 className="cursor-pointer">Home</h1>
           </Link>
@@ -34,10 +34,11 @@ function Header() {
           <h1 className="cursor-pointer">Gallery</h1>
           <CustomButton
             text="Get started"
+            textColor="text-black"
             width="w-[120px]"
             height="h-[40px]"
             marginTop="mt-0"
-            backgroundColor="bg-black"
+            backgroundColor="bg-white"
             hoverEffect="hover:bg-customColor"
           />
         </div>
