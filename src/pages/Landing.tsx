@@ -63,7 +63,7 @@ function Landing() {
         color="white"
         readMoreText="white"
         h1TextColor={h1TextColor}
-        imgSrc="/we.svg"
+        imgSrc="/wha.svg"
         imgAlt=""
       />
       <UserTestemonials />

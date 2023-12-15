@@ -109,7 +109,7 @@ function AboutUs() {
         color="black"
         readMoreText="black"
         h1TextColor={h1TextColor}
-        imgSrc="/arrow.svg"
+        imgSrc="/bla.svg"
         imgAlt=""
       />
       <Testimonial />

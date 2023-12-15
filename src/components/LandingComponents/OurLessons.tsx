@@ -5,11 +5,17 @@ interface HeadingProps {
   color: string;
   readMoreText: string;
   h1TextColor: string;
-  imgSrc: string; 
+  imgSrc: string;
   imgAlt: string;
 }
 
-const OurLessons: React.FC<HeadingProps> = ({ color, readMoreText,  h1TextColor, imgAlt, imgSrc }) => {
+const OurLessons: React.FC<HeadingProps> = ({
+  color,
+  readMoreText,
+  h1TextColor,
+  imgAlt,
+  imgSrc,
+}) => {
   return (
     <div
       id="OurLessons"
@@ -42,8 +48,8 @@ const OurLessons: React.FC<HeadingProps> = ({ color, readMoreText,  h1TextColor,
                 </h1>
                 <div className="ml-[8px]">
                   <img
-                     src={imgSrc}
-                     alt={imgAlt}
+                    src={imgSrc}
+                    alt={imgAlt}
                     className="w-[18px] h-[15px] md:w-auto md:h-auto"
                   />
                 </div>
@@ -73,8 +79,8 @@ const OurLessons: React.FC<HeadingProps> = ({ color, readMoreText,  h1TextColor,
                 </h1>
                 <div className="ml-[8px]">
                   <img
-                     src={imgSrc}
-                     alt={imgAlt}
+                    src={imgSrc}
+                    alt={imgAlt}
                     className="w-[18px] h-[15px] md:w-auto md:h-auto"
                   />
                 </div>
@@ -104,8 +110,8 @@ const OurLessons: React.FC<HeadingProps> = ({ color, readMoreText,  h1TextColor,
                 </h1>
                 <div className="ml-[8px]">
                   <img
-                     src={imgSrc}
-                     alt={imgAlt}
+                    src={imgSrc}
+                    alt={imgAlt}
                     className="w-[18px] h-[15px] md:w-auto md:h-auto"
                   />
                 </div>
