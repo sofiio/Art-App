@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CustomButton from "../components/CustomButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -12,6 +13,7 @@ import Welcome from "../components/LandingComponents/Welcome";
 import { Link } from "react-scroll";
 
 function Landing() {
+  const [h1TextColor, setH1TextColor] = useState("white");
   return (
     <div className="w-full mx-auto bg-black relative" id="Landing">
       <Header />
@@ -57,7 +59,13 @@ function Landing() {
       <ChooseUs />
       <OurMission />
       <OutTeam />
-      <OurLessons />
+      <OurLessons
+        color="white"
+        readMoreText="white"
+        h1TextColor={h1TextColor}
+        imgSrc="/we.svg"
+        imgAlt=""
+      />
       <UserTestemonials />
       <Faq />
       <Footer

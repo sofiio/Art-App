@@ -1,8 +1,8 @@
 function OurTeam() {
   return (
     <div className="w-full bg-black">
-      <div className="2xl:w-[1440px] w-[375px] 2xl:mt-[100px]  mt-[174px] md:mt-[100px] lg:mt-[230px] mx-auto lg:h-[702px] h-[961px] flex flex-col items-center ">
-        <h1 className="lg:mt-[73px] mt-[40px] lg:text-[48px] text-[32px] lg:font-sans font-quinapple text-white">
+      <div className="2xl:w-[1440px] w-[375px] 2xl:mt-[100px]  mt-[174px] sm:mt-[100px] md:mt-[50px] lg:mt-[230px] mx-auto lg:h-[702px] h-[961px] flex flex-col items-center ">
+        <h1 className="lg:mt-[73px] mt-[40px] lg:text-[48px] text-[32px] sm:text-[40px] lg:font-sans font-quinapple text-white">
           Our Team
         </h1>
         <div className="flex flex-col lg:flex-row w-[375px] lg:w-[597px] h-[340px] lg:mt-[72px] mt-[48px] items-center lg:items-start">

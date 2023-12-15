@@ -1,9 +1,9 @@
 function Founders() {
   return (
     <>
-      <div className="2xl:w-[1440px] lg:w-[900px] w-[375px] md:w-[543px] mx-auto flex flex-row">
-        <div className="flex lg:mt-[163px] mt-[57px] mx-auto lg:w-[1312px] w-[343px] md:w-[543px] h-[567px]">
-          <div className="lg:w-[657px] w-[343px] md:w-[543px] lg:h-[547px] h-[567px] flex flex-col items-center lg:items-start">
+      <div className="2xl:w-[1440px] lg:w-[900px] w-[375px] sm:w-[500px] md:w-[700px] mx-auto flex flex-row">
+        <div className="flex lg:mt-[163px] mt-[57px] mx-auto lg:w-[1312px] w-[343px] sm:w-[500px] md:w-[700px] h-[567px]">
+          <div className="lg:w-[657px] w-[343px] sm:w-[500px]  md:w-[700px] lg:h-[547px] h-[567px] flex flex-col items-center lg:items-start">
             <h1 className="lg:text-[32px] text-[28px] font-black font-quinapple">
               GIORGI TSITURI
             </h1>
@@ -27,22 +27,26 @@ function Founders() {
             </h1>
           </div>
           <div className="lg:ml-[88px]">
-            <img src="/gi.png" alt="" className="lg:block hidden" />
+            <img
+              src="/gi.png"
+              alt=""
+              className="lg:block hidden 2xl:w-[612px] lg:h-[400px] lg:w-[600px] 2xl:h-[567px]"
+            />
           </div>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col 2xl:mt-[163px] mt-[350px] lg:mt-0 mx-auto 2xl:w-[1312px] lg:w-[900px] w-[343px] md:w-[543px] h-[570px] 2xl:h-[570px] lg:h-[500px]">
-        <div>
-          <h1 className="text-[32px] font-black font-quinapple lg:hidden block">
+      <div className="flex lg:flex-row flex-col 2xl:mt-[163px] mt-[350px] lg:mt-0 mx-auto 2xl:w-[1312px] lg:w-[900px] w-[343px] sm:w-[500px] md:w-[700px] h-[570px] sm:h-[530px] md:h-[600px] 2xl:h-[570px] lg:h-[500px]">
+        <div className="flex flex-col items-center">
+          <h1 className="text-[28px] font-black font-quinapple lg:hidden block mt-2 sm:mt-6 lg:mt-0">
             Teo Tsotsolashvili
           </h1>
           <img
             src="/te.png"
             alt=""
-            className="w-[343px] md:w-[543px] h-[313px] md:h-[513px] lg:w-auto lg:h-auto mt-[16px] lg:mt-0"
+            className="w-[343px] md:w-[700px] sm:w-[500px] h-[313px] sm:h-[450px] md:h-[600px] lg:w-auto 2xl:w-[570px] 2xl:h-[513px] lg:h-auto mt-[16px] lg:mt-0"
           />
         </div>
-        <div className="lg:w-[657px] w-[343px] md:w-[543px] h-[547px] lg:ml-[43px]">
+        <div className="lg:w-[657px] w-[343px] sm:w-[500px] md:w-[700px] h-[547px]  lg:ml-[43px]">
           <h1 className="text-[32px] font-black font-quinapple hidden lg:block">
             Teo Tsotsolashvili
           </h1>

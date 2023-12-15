@@ -5,8 +5,10 @@ import Testimonial from "../components/AboutUsComponents/Testimonial";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import OurLessons from "../components/LandingComponents/OurLessons";
+import { useState } from "react";
 
 function AboutUs() {
+  const [h1TextColor, setH1TextColor] = useState("black");
   return (
     <>
       <Header />
@@ -22,7 +24,7 @@ function AboutUs() {
       </div>
 
       {/* text */}
-      <div className="2xl:w-[1312px] lg:w-[900px] w-[343px] md:w-[543px] lg:h-[192px] h-[261px] lg:mt-[75px] mt-[32px] mx-auto font-black">
+      <div className="2xl:w-[1312px] lg:w-[900px] w-[343px] sm:w-[500px] md:w-[700px] lg:h-[192px] h-[261px] lg:mt-[75px] mt-[32px] mx-auto font-black">
         <h1 className="lg:text-[40px] text-[24px] font-quinapple">
           Our non-formal educational classes are your gateway to the captivating
           realms of theater, literature, and music, where legendary actors,
@@ -33,7 +35,7 @@ function AboutUs() {
       <OurTeam />
       <Founders />
       {/* texts */}
-      <div className="2xl:w-[1312px] lg:w-[900px]  w-[343px] md:w-[543px] lg:h-[362px] h-[571px] md:h-[500px] mx-auto mt-[350px] lg:mt-0 2xl:mt-[61px]">
+      <div className="2xl:w-[1312px] lg:w-[900px] sm:w-[500px] w-[343px] md:w-[700px] lg:h-[362px] h-[571px] sm:h-[350px] mx-auto mt-[350px] lg:mt-0 2xl:mt-[61px]">
         <h1 className="2xl:text-[20px] text-[16px] font-medium">
           At ‘VII Lesson’ we believe that literature is more than words on a
           page; Music is not just melody that reminds you having nice time and
@@ -64,11 +66,11 @@ function AboutUs() {
       <img
         src="/last.png"
         alt=""
-        className="mx-auto 2xl:mt-[60px] mt-[120px] md:mt-0 w-[343px] md:w-[543px] h-[204px] md:h-[300px] lg:w-[900px]  2xl:w-auto lg:h-auto"
+        className="mx-auto 2xl:mt-[60px] mt-[120px] md:mt-0 w-[343px] sm:w-[500px] md:w-[700px] h-[204px] md:h-[300px] lg:w-[900px]  2xl:w-auto lg:h-auto"
       />
 
       {/* last text */}
-      <div className="lg:mt-[78px] mt-[32px] 2xl:w-[1312px] lg:w-[900px]  w-[343px] md:w-[543px] 2xl:h-[452px] h-[850px] md:h-[500px] lg:h-[300px] mx-auto 2xl:text-[20px] text-[16px] font-medium">
+      <div className="lg:mt-[78px] mt-[32px] 2xl:w-[1312px] lg:w-[900px]  w-[343px] sm:w-[500px] md:w-[700px] 2xl:h-[452px] h-[850px] sm:h-[650px] md:h-[170px] lg:h-[100px] xl:h-[400px] mx-auto 2xl:text-[20px] text-[16px] font-medium">
         <h1>
           At ‘VII Leeson’ , We are on a mission to ignite the passion for the
           arts in teenagers by delving into the rich history and extraordinary
@@ -103,7 +105,13 @@ function AboutUs() {
           and make their own decisions can foster independence and innovation.
         </h1>
       </div>
-      <OurLessons />
+      <OurLessons
+        color="black"
+        readMoreText="black"
+        h1TextColor={h1TextColor}
+        imgSrc="/arrow.svg"
+        imgAlt=""
+      />
       <Testimonial />
       <Footer
         mobileBgColor="white"

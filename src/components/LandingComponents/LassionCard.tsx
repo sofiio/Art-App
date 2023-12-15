@@ -7,12 +7,14 @@ interface LassionCardProps {
   buttonLabel: string;
   readMoreText?: string;
   marginLeft?: string;
+  h1TextColor: string;
 }
 
 const LassionCard: React.FC<LassionCardProps> = ({
   imgSrc,
   imgAlt,
   h1Text,
+  h1TextColor,
   marginLeft = "0", // default value if not provided
 }: LassionCardProps) => {
   return (
@@ -27,7 +29,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
       </div>
       <div className="flex flex-row md:flex md:flex-col justify-between md:justify-start items-center md:items-start mt-[12px] lg:mt-0">
         <h1
-          className={`2xl:mt-[20px] md:text-[24px] text-[16px] font-bold text-white font-quinapple ${marginLeft}`}
+          className={`2xl:mt-[20px] md:text-[24px] text-[16px] font-black text-${h1TextColor} font-quinapple ${marginLeft}`}
         >
           {h1Text}
         </h1>
