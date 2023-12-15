@@ -25,7 +25,8 @@ function AboutUs() {
 
       {/* text */}
       <div className="2xl:w-[1312px] lg:w-[900px] w-[343px] sm:w-[500px] md:w-[700px] lg:h-[192px] h-[261px] lg:mt-[75px] mt-[32px] mx-auto font-black">
-        <h1 className="lg:text-[40px] text-[24px] font-quinapple">
+        {/* same here as in landing component, no need to use seter, just used to be used and not having error. no need of it */}
+        <h1 onClick={() => setH1TextColor("black")} className="lg:text-[40px] text-[24px] font-quinapple">
           Our non-formal educational classes are your gateway to the captivating
           realms of theater, literature, and music, where legendary actors,
           writers and rock stars have left an indelible mark on the world's
