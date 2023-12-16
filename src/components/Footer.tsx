@@ -23,7 +23,7 @@ function Footer({
       >
         <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto">
           <div className="h-[408px] xl:border-b xl:flex xl:flex-row pt-[80px]">
-            <div className="2xl:w-[500px] w-[343px] md:w-[700px] sm:w-[500px] h-[223px] space-y-4 mx-auto xl:mx-0">
+            <div className="2xl:w-[500px] w-[340px] md:w-[700px] sm:w-[500px] h-[223px] space-y-4 mx-auto xl:mx-0">
               <h1
                 className={`xl:text-[18px] text-[16px] font-bold md:text-black text-${textColor}`}
               >
@@ -44,6 +44,7 @@ function Footer({
                 and provide consent to receive updates from our company.
               </h1>
             </div>
+
             <div className="flex flex-row mt-[25px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] font-sans text-[14px] flex flex-col space-y-4">
                 <Link to="/AboutUs">

@@ -30,7 +30,10 @@ function Landing() {
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col mt-[120px] sm:mt-[135px] md:mt-[220px] xl:justify-center xl:mt-[110px] items-center text-white">
           <div className="xl:w-[1237px] w-[375px] md:w-[747px] sm:w-[500px] h-[70px] flex text-center">
             {/* seter is just uset, to use it somewhere inside component. no need of it */}
-            <h1 onClick={() => setH1TextColor("white")}className="font-bold xl:text-[48px] text-[24px] md:text-[40px] sm:text-[28px] font-quinapple">
+            <h1
+              onClick={() => setH1TextColor("white")}
+              className="font-bold xl:text-[48px] text-[24px] md:text-[40px] sm:text-[28px] font-quinapple"
+            >
               Tomorrow belongs to those who can hear it coming
             </h1>
           </div>

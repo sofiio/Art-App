@@ -88,7 +88,7 @@ function ContactUsForm() {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-[48px] font-bold xl:mt-[112px] mt-16">Contact us</h1>
-      <div className="xl:w-[668px] w-[322px] xl:h-[657px] h-[1000px] mt-[48px]">
+      <div className="xl:w-[668px] w-[322px] xl:h-[657px] mt-[48px]">
         <form className="flex flex-col" onSubmit={handleSubmit(submitData)}>
           <div className="xl:flex xl:flex-row flex flex-col mx-auto xl:mx-0">
             <div className="flex flex-col space-y-2">

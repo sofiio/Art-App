@@ -16,7 +16,7 @@ function ChooseUs() {
           <img
             src="/saa.png"
             alt=""
-            className="xl:mt-[147px] mt-[94px] xl:ml-[197px] ml-[124px] 2xl:w-[351px] xl:w-[300px] xl:h-[300px] 2xl:h-[349px] w-[219px] h-[219px] absolute top-0 left-0"
+            className="xl:mt-[147px] mt-[94px] xl:ml-[197px] ml-[124px] 2xl:w-[351px] xl:w-[300px] xl:h-[300px] 2xl:h-[349px] w-[210px] h-[210px] absolute top-0 left-0"
           />
         </div>
         <div className="md:w-[717px] sm:w-[500px] w-[321px] md:h-[480px] mx-auto md:mx-0 h-[812px] lg:ml-[68px] mt-36 md:mt-0 ">

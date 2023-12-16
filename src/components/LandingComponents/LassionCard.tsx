@@ -18,7 +18,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
   marginLeft = "0", // default value if not provided
 }: LassionCardProps) => {
   return (
-    <div className="w-[327px] h-[238px] 2xl:w-auto 2xl:h-auto">
+    <div className="w-[310px] sm:w-[327px] h-[238px] 2xl:w-auto 2xl:h-auto">
       <div className="relative overflow-hidden inline-block rounded-[12px]">
         <img
           src={imgSrc}

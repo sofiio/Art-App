@@ -26,7 +26,7 @@ const OurLessons: React.FC<HeadingProps> = ({
       >
         OUR LESSONS
       </h1>
-      <div className="2xl:w-[1312px] xl:w-[1100px] w-[375px] md:w-[747px] lg:w-[900px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[50px] mt-4 md:mt-8 flex justify-between overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
+      <div className="2xl:w-[1312px] xl:w-[1100px] w-[355px] md:w-[747px] lg:w-[900px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[50px] mt-4 md:mt-8 flex justify-between overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
         <Link to="/Music">
           <div className="">
             <LassionCard
