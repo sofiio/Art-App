@@ -52,7 +52,7 @@ function Landing() {
                 height="h-[48px]"
                 marginTop="mt-[67px]"
                 backgroundColor="bg-white"
-                hoverEffect="hover:bg-white"
+                hoverEffect="hover:bg-customColor"
               />
             </Link>
           </div>
