@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
 
 function Share() {
+  const navigate = useNavigate();
+  const handleContactUsClick = () => {
+    navigate("/ContactUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <div className="flex flex-col items-center">
       <div className="lg:w-[768px] md:w-[700px] sm:w-[500px] w-[344px] bg-white md:h-[110px] h-[75px] md:mt-[90px] mt-[32px] md:mx-auto flex  md:border-b border-black">
@@ -27,6 +33,7 @@ function Share() {
             marginTop="mt-[24px]"
             backgroundColor="bg-black"
             hoverEffect="hover:bg-customColor"
+            onClick={handleContactUsClick}
           />
         </Link>
       </div>

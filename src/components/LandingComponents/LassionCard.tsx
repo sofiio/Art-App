@@ -8,6 +8,7 @@ interface LassionCardProps {
   readMoreText?: string;
   marginLeft?: string;
   h1TextColor: string;
+  onClick?: () => void;
 }
 
 const LassionCard: React.FC<LassionCardProps> = ({
@@ -15,6 +16,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
   imgAlt,
   h1Text,
   h1TextColor,
+  onClick,
   marginLeft = "0", // default value if not provided
 }: LassionCardProps) => {
   return (
@@ -45,6 +47,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
           font="font-semibold"
           hoverEffect="hover:bg-customColor/10"
           border="border-none"
+          onClick={onClick}
         />
       </div>
     </div>

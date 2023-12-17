@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import CustomButton from "../CustomButton";
+import { useNavigate } from "react-router-dom";
 
 function LearnMore() {
+  const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    navigate("/AboutUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <div className="max-w-[1440px] mx-auto md:mt-[40px] mt-0">
       <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto md:flex justify-end hidden">
@@ -16,6 +24,7 @@ function LearnMore() {
             rounded="rounded-full"
             imgSrc="/vet.svg"
             hoverEffect="hover:bg-white hover:text-black hover:border hover:border-black"
+            onClick={handleAboutClick}
           />
         </Link>
       </div>

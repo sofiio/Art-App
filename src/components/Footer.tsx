@@ -1,5 +1,5 @@
 import FormComponent from "./FormComponent";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface FooterProps {
   mobileBgColor: "white" | "black";
@@ -16,6 +16,32 @@ function Footer({
 }: FooterProps) {
   const firstImageClass = hideFirstImageMobile ? "hidden" : ""; // Add the hidden class conditionally
   const SecondImageClass = SecondImageMobile ? "hidden" : ""; // Add the hidden class conditionally
+
+  const navigate = useNavigate();
+  const handleAboutUsClick = () => {
+    navigate("/AboutUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+  const handleMusicClick = () => {
+    navigate("/Music");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleLiteratureClick = () => {
+    navigate("/Literature");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleTheatreClick = () => {
+    navigate("/Theatre");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+  const handleContactUsClick = () => {
+    navigate("/ContactUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+
   return (
     <>
       <div
@@ -48,23 +74,23 @@ function Footer({
             <div className="flex flex-row mt-[25px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] font-sans text-[14px] flex flex-col space-y-4">
                 <Link to="/AboutUs">
-                  <h1 className={`mt-4 md:text-black text-${textColor}`}>
+                  <h1 onClick={handleAboutUsClick} className={`mt-4 md:text-black text-${textColor}`}>
                     About Us
                   </h1>
                 </Link>
                 <Link to="/Music">
-                  <h1 className={`md:text-black text-${textColor}`}>Music</h1>
+                  <h1 onClick={handleMusicClick}  className={`md:text-black text-${textColor}`}>Music</h1>
                 </Link>
                 <Link to="/Literature">
-                  <h1 className={`md:text-black text-${textColor}`}>
+                  <h1  onClick={handleLiteratureClick} className={`md:text-black text-${textColor}`}>
                     Literature
                   </h1>
                 </Link>
                 <Link to="/Theatre">
-                  <h1 className={`md:text-black text-${textColor}`}>Theatre</h1>
+                  <h1 onClick={handleTheatreClick} className={`md:text-black text-${textColor}`}>Theatre</h1>
                 </Link>
                 <Link to="/ContactUs">
-                  <h1 className={`md:text-black text-${textColor}`}>
+                  <h1 onClick={handleContactUsClick} className={`md:text-black text-${textColor}`}>
                     Contact Us
                   </h1>
                 </Link>

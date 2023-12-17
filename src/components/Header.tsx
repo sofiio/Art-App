@@ -1,10 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 
 function Header() {
   const [nav, setNav] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAboutUsClick = () => {
+    navigate("/AboutUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleTheatreClick = () => {
+    navigate("/Theatre");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleMusicClick = () => {
+    navigate("/Music");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleLiteratureClick = () => {
+    navigate("/Literature");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleHomeClick = () => {
+    navigate("/");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
 
   return (
     <div className="font-sans sticky border-b border-black top-0 z-10 w-full h-[55px] xl:h-[72px] mx-auto bg-black ">
@@ -13,23 +39,33 @@ function Header() {
        flex mx-auto justify-between items-center h-full"
       >
         <Link to="/">
-        <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="" onClick={handleHomeClick} />
         </Link>
         <div className="hidden xl:flex items-center space-x-[32px] text-white text-[16px]">
           <Link to="/">
-            <h1 className="cursor-pointer">Home</h1>
+            <h1 onClick={handleHomeClick} className="cursor-pointer">
+              Home
+            </h1>
           </Link>
           <Link to="/AboutUs">
-            <h1 className="cursor-pointer">About Us</h1>
+            <h1 onClick={handleAboutUsClick} className="cursor-pointer">
+              About Us
+            </h1>
           </Link>
           <Link to="/Theatre">
-            <h1 className="cursor-pointer">Theatre</h1>
+            <h1 onClick={handleTheatreClick} className="cursor-pointer">
+              Theatre
+            </h1>
           </Link>
           <Link to="/Music">
-            <h1 className="cursor-pointer">Music</h1>
+            <h1 onClick={handleMusicClick} className="cursor-pointer">
+              Music
+            </h1>
           </Link>
           <Link to="/Literature">
-            <h1 className="cursor-pointer">Literature</h1>
+            <h1 onClick={handleLiteratureClick} className="cursor-pointer">
+              Literature
+            </h1>
           </Link>
           <h1 className="cursor-pointer">Gallery</h1>
           <CustomButton

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import LassionCard from "./LassionCard";
+import { useNavigate } from "react-router-dom";
 
 interface HeadingProps {
   color: string;
@@ -16,6 +17,23 @@ const OurLessons: React.FC<HeadingProps> = ({
   imgAlt,
   imgSrc,
 }) => {
+  const navigate = useNavigate();
+
+  const handleMusClick = () => {
+    navigate("/Music");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleLitClick = () => {
+    navigate("/Literature");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleTheatrClick = () => {
+    navigate("/Theatre");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <div
       id="OurLessons"
@@ -29,14 +47,16 @@ const OurLessons: React.FC<HeadingProps> = ({
       <div className="2xl:w-[1312px] xl:w-[1100px] w-[355px] md:w-[747px] lg:w-[900px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[50px] mt-4 md:mt-8 flex justify-between overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
         <Link to="/Music">
           <div className="">
-            <LassionCard
-              imgSrc="/dd1.svg"
-              imgAlt=""
-              h1Text="MUSIC"
-              buttonLabel="4 Months"
-              h1TextColor={h1TextColor}
-              marginLeft="ml-0" // customize margin-left if needed
-            />
+            <div onClick={handleMusClick}>
+              <LassionCard
+                imgSrc="/dd1.svg"
+                imgAlt=""
+                h1Text="MUSIC"
+                buttonLabel="4 Months"
+                h1TextColor={h1TextColor}
+                marginLeft="ml-0" // customize margin-left if needed
+              />
+            </div>
             <Link to="/Syllabus">
               <button
                 className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
@@ -57,17 +77,18 @@ const OurLessons: React.FC<HeadingProps> = ({
             </Link>
           </div>
         </Link>
-
         <Link to="/Literature">
           <div className="lg:ml-[32px] ml-[15px]">
-            <LassionCard
-              imgSrc="/dd2.svg"
-              imgAlt="Music Image"
-              h1Text="LITERATURE"
-              buttonLabel="4 Months"
-              h1TextColor={h1TextColor}
-              marginLeft="ml-0" // customize margin-left if needed
-            />
+            <div onClick={handleLitClick}>
+              <LassionCard
+                imgSrc="/dd2.svg"
+                imgAlt="Music Image"
+                h1Text="LITERATURE"
+                buttonLabel="4 Months"
+                h1TextColor={h1TextColor}
+                marginLeft="ml-0" // customize margin-left if needed
+              />
+            </div>
             <Link to="/Syllabus">
               <button
                 className={`flex mt-[45px] lg:mt-[110px] md:mt-[110px] 2xl:mt-[20px] items-center w-[109px] h-[24px]`}
@@ -91,14 +112,17 @@ const OurLessons: React.FC<HeadingProps> = ({
 
         <Link to="/Theatre">
           <div className="ml-[32px] md:ml-[15px] xl:ml-[32px]">
-            <LassionCard
-              imgSrc="/dd3.svg"
-              imgAlt="Music Image"
-              h1Text="THEATRE"
-              buttonLabel="4 Months"
-              h1TextColor={h1TextColor}
-              marginLeft="ml-0" // customize margin-left if needed
-            />
+            <div onClick={handleTheatrClick}>
+              <LassionCard
+                imgSrc="/dd3.svg"
+                imgAlt="Music Image"
+                h1Text="THEATRE"
+                buttonLabel="4 Months"
+                h1TextColor={h1TextColor}
+                marginLeft="ml-0" // customize margin-left if needed
+                onClick={handleTheatrClick}
+              />
+            </div>
             <Link to="/Syllabus">
               <button
                 className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}

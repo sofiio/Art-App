@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButton from "../CustomButton";
 import React, { useState } from "react";
 
 const Faq: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleContactUsClick = () => {
+    navigate("/ContactUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   const [isDropdownVisible1, setIsDropdownVisible1] = useState(false);
   const [isDropdownVisible2, setIsDropdownVisible2] = useState(false);
   const [isDropdownVisible3, setIsDropdownVisible3] = useState(false);
@@ -270,6 +277,7 @@ const Faq: React.FC = () => {
               marginTop="mt-[36px]"
               backgroundColor="bg-black"
               hoverEffect="hover:bg-customColor"
+              onClick={handleContactUsClick}
             />
           </div>
         </Link>
