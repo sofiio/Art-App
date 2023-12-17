@@ -8,6 +8,11 @@ const Faq: React.FC = () => {
   const [isDropdownVisible3, setIsDropdownVisible3] = useState(false);
   const [isDropdownVisible4, setIsDropdownVisible4] = useState(false);
   const [isDropdownVisible5, setIsDropdownVisible5] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
+  const [isRotated1, setIsRotated1] = useState(false);
+  const [isRotated2, setIsRotated2] = useState(false);
+  const [isRotated3, setIsRotated3] = useState(false);
+  const [isRotated4, setIsRotated4] = useState(false);
 
   const toggleDropdown1 = () => {
     setIsDropdownVisible1(!isDropdownVisible1);
@@ -15,6 +20,11 @@ const Faq: React.FC = () => {
     setIsDropdownVisible3(false);
     setIsDropdownVisible4(false);
     setIsDropdownVisible5(false);
+    setIsRotated((prev) => !prev);
+    setIsRotated1(false);
+    setIsRotated2(false);
+    setIsRotated3(false);
+    setIsRotated4(false);
   };
 
   const toggleDropdown2 = () => {
@@ -23,6 +33,11 @@ const Faq: React.FC = () => {
     setIsDropdownVisible3(false);
     setIsDropdownVisible4(false);
     setIsDropdownVisible5(false);
+    setIsRotated1((prev) => !prev);
+    setIsRotated(false);
+    setIsRotated2(false);
+    setIsRotated3(false);
+    setIsRotated4(false);
   };
 
   const toggleDropdown3 = () => {
@@ -31,6 +46,11 @@ const Faq: React.FC = () => {
     setIsDropdownVisible5(false);
     setIsDropdownVisible1(false);
     setIsDropdownVisible2(false);
+    setIsRotated2((prev) => !prev);
+    setIsRotated(false);
+    setIsRotated1(false);
+    setIsRotated3(false);
+    setIsRotated4(false);
   };
 
   const toggleDropdown4 = () => {
@@ -39,6 +59,11 @@ const Faq: React.FC = () => {
     setIsDropdownVisible1(false);
     setIsDropdownVisible2(false);
     setIsDropdownVisible3(false);
+    setIsRotated3((prev) => !prev);
+    setIsRotated(false);
+    setIsRotated1(false);
+    setIsRotated2(false);
+    setIsRotated4(false);
   };
 
   const toggleDropdown5 = () => {
@@ -47,6 +72,11 @@ const Faq: React.FC = () => {
     setIsDropdownVisible2(false);
     setIsDropdownVisible3(false);
     setIsDropdownVisible4(false);
+    setIsRotated4((prev) => !prev);
+    setIsRotated(false);
+    setIsRotated1(false);
+    setIsRotated2(false);
+    setIsRotated3(false);
   };
 
   return (
@@ -66,14 +96,20 @@ const Faq: React.FC = () => {
               <img
                 src="/Icon.svg"
                 alt=""
-                className="w-[32px] h-[32px] hidden md:block cursor-pointer"
+                className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
+                  isRotated ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown1}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
                 src="/blarow.svg"
                 alt=""
-                className="w-[32px] h-[32px] block md:hidden cursor-pointer"
+                className={`w-[32px] h-[32px] block md:hidden cursor-pointer ${
+                  isRotated ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown1}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
             </div>
             {isDropdownVisible1 && (
@@ -94,14 +130,20 @@ const Faq: React.FC = () => {
               <img
                 src="/Icon.svg"
                 alt=""
-                className="w-[32px] h-[32px] hidden md:block cursor-pointer"
+                className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
+                  isRotated1 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown2}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
                 src="/blarow.svg"
                 alt=""
-                className="w-[32px] h-[32px] block md:hidden cursor-pointer"
+                className={`w-[32px] h-[32px] block md:hidden cursor-pointer ${
+                  isRotated1 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown2}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
             </div>
             {isDropdownVisible2 && (
@@ -122,14 +164,20 @@ const Faq: React.FC = () => {
               <img
                 src="/Icon.svg"
                 alt=""
-                className="w-[32px] h-[32px] hidden md:block cursor-pointer"
+                className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
+                  isRotated2 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown3}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
                 src="/blarow.svg"
                 alt=""
-                className="w-[32px] h-[32px] block md:hidden cursor-pointer"
+                className={`w-[32px] h-[32px] block md:hidden cursor-pointer ${
+                  isRotated2 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown3}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
             </div>
             {isDropdownVisible3 && (
@@ -150,14 +198,20 @@ const Faq: React.FC = () => {
               <img
                 src="/Icon.svg"
                 alt=""
-                className="w-[32px] h-[32px] hidden md:block cursor-pointer"
+                className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
+                  isRotated3 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown4}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
                 src="/blarow.svg"
                 alt=""
-                className="w-[32px] h-[32px] block md:hidden cursor-pointer"
+                className={`w-[32px] h-[32px] block md:hidden cursor-pointer ${
+                  isRotated3 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown4}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
             </div>
             {isDropdownVisible4 && (
@@ -178,14 +232,20 @@ const Faq: React.FC = () => {
               <img
                 src="/Icon.svg"
                 alt=""
-                className="w-[32px] h-[32px] hidden md:block cursor-pointer"
+                className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
+                  isRotated4 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown5}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
                 src="/blarow.svg"
                 alt=""
-                className="w-[32px] h-[32px] block md:hidden cursor-pointer"
+                className={`w-[32px] h-[32px] block md:hidden cursor-pointer ${
+                  isRotated4 ? "rotate-180" : ""
+                }`}
                 onClick={toggleDropdown5}
+                style={{ transition: "transform 0.3s ease" }}
               ></img>
             </div>
             {isDropdownVisible5 && (
@@ -199,7 +259,7 @@ const Faq: React.FC = () => {
           </div>
         </div>
         <h1 className="text-white font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px] mt-[80px] xl:mt-[50px]">
-          Still have questions?
+          Still have questions<span className="font-sans"> ?</span>
         </h1>
         <Link to="/ContactUs">
           <div className="mb-20 xl:mb-0">
@@ -207,7 +267,7 @@ const Faq: React.FC = () => {
               text="Contact us"
               width="w-[124px]"
               height="h-[48px]"
-              marginTop="mt-[24px]"
+              marginTop="mt-[36px]"
               backgroundColor="bg-black"
               hoverEffect="hover:bg-customColor"
             />
