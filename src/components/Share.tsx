@@ -1,5 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
+import { FacebookShareButton } from "react-share";
+import { InstapaperShareButton } from "react-share";
 
 function Share() {
   const navigate = useNavigate();
@@ -14,10 +16,15 @@ function Share() {
         <div className="w-[152px] h-[75px]">
           <h1 className="text-[18px] font-semibold">Share</h1>
           <div className="flex space-x-4 mt-[20px]">
-            <img src="/Link.svg" alt="" />
-            <img src="/linkedin.svg" alt="" />
-            <img src="/x.svg" alt="" />
-            <img src="/facebook.svg" alt="" />
+            <InstapaperShareButton url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions">
+              <img src="/instagram.svg" alt="" />
+            </InstapaperShareButton>
+            <FacebookShareButton
+              url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions"
+              hashtag="#React"
+            >
+              <img src="/facebook.svg" alt="" />
+            </FacebookShareButton>
           </div>
         </div>
       </div>

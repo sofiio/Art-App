@@ -41,7 +41,6 @@ function Footer({
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
-
   return (
     <>
       <div
@@ -74,23 +73,42 @@ function Footer({
             <div className="flex flex-row mt-[25px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] font-sans text-[14px] flex flex-col space-y-4">
                 <Link to="/AboutUs">
-                  <h1 onClick={handleAboutUsClick} className={`mt-4 md:text-black text-${textColor}`}>
+                  <h1
+                    onClick={handleAboutUsClick}
+                    className={`mt-4 md:text-black text-${textColor}`}
+                  >
                     About Us
                   </h1>
                 </Link>
                 <Link to="/Music">
-                  <h1 onClick={handleMusicClick}  className={`md:text-black text-${textColor}`}>Music</h1>
+                  <h1
+                    onClick={handleMusicClick}
+                    className={`md:text-black text-${textColor}`}
+                  >
+                    Music
+                  </h1>
                 </Link>
                 <Link to="/Literature">
-                  <h1  onClick={handleLiteratureClick} className={`md:text-black text-${textColor}`}>
+                  <h1
+                    onClick={handleLiteratureClick}
+                    className={`md:text-black text-${textColor}`}
+                  >
                     Literature
                   </h1>
                 </Link>
                 <Link to="/Theatre">
-                  <h1 onClick={handleTheatreClick} className={`md:text-black text-${textColor}`}>Theatre</h1>
+                  <h1
+                    onClick={handleTheatreClick}
+                    className={`md:text-black text-${textColor}`}
+                  >
+                    Theatre
+                  </h1>
                 </Link>
                 <Link to="/ContactUs">
-                  <h1 onClick={handleContactUsClick} className={`md:text-black text-${textColor}`}>
+                  <h1
+                    onClick={handleContactUsClick}
+                    className={`md:text-black text-${textColor}`}
+                  >
                     Contact Us
                   </h1>
                 </Link>
@@ -127,51 +145,6 @@ function Footer({
                   />
                   <h1 className={`text-[14px] md:text-black text-${textColor}`}>
                     Instagram
-                  </h1>
-                </div>
-                <div className="flex space-x-2 cursor-pointer">
-                  <img
-                    src="/x.svg"
-                    alt=""
-                    className={`${firstImageClass} md:block`}
-                  />
-                  <img
-                    src="/wx.svg"
-                    alt=""
-                    className={`${SecondImageClass} md:hidden`}
-                  />
-                  <h1 className={`text-[14px] md:text-black text-${textColor}`}>
-                    X
-                  </h1>
-                </div>
-                <div className="flex space-x-2 cursor-pointer">
-                  <img
-                    src="/linkedin.svg"
-                    alt=""
-                    className={`${firstImageClass} md:block`}
-                  />
-                  <img
-                    src="/wlinkedin.svg"
-                    alt=""
-                    className={`${SecondImageClass} md:hidden`}
-                  />
-                  <h1 className={`text-[14px] md:text-black text-${textColor}`}>
-                    LinkedIn
-                  </h1>
-                </div>
-                <div className="flex space-x-2 cursor-pointer">
-                  <img
-                    src="/youtube.svg"
-                    alt=""
-                    className={`${firstImageClass} md:block`}
-                  />
-                  <img
-                    src="/wyoutube.svg"
-                    alt=""
-                    className={`${SecondImageClass} md:hidden`}
-                  />
-                  <h1 className={`text-[14px] md:text-black text-${textColor}`}>
-                    Youtube
                   </h1>
                 </div>
               </div>

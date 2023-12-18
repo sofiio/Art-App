@@ -1,3 +1,6 @@
+import { FacebookShareButton } from "react-share";
+import { InstapaperShareButton } from "react-share";
+
 function OurTeam() {
   return (
     <div className="w-full bg-black">
@@ -14,8 +17,15 @@ function OurTeam() {
               </h1>
               <h1 className="text-[18px] text-white mt-2 ">Founder, Teacher</h1>
               <div className="flex space-x-4 mt-4">
-                <img src="/linked.svg" alt="" />
-                <img src="/Xx.svg" alt="" />
+                <InstapaperShareButton url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions">
+                  <img src="/winstagram.svg" alt="" />
+                </InstapaperShareButton>
+                <FacebookShareButton
+                  url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions"
+                  hashtag="#React"
+                >
+                  <img src="/wfacebook.svg" alt="" />
+                </FacebookShareButton>
               </div>
             </div>
           </div>
@@ -27,8 +37,15 @@ function OurTeam() {
               </h1>
               <h1 className="text-[18px] text-white mt-2 ">Founder, Teacher</h1>
               <div className="flex space-x-4 mt-4">
-                <img src="/linked.svg" alt="" />
-                <img src="/Xx.svg" alt="" />
+                <InstapaperShareButton url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions">
+                  <img src="/winstagram.svg" alt="" />
+                </InstapaperShareButton>
+                <FacebookShareButton
+                  url="https://www.youtube.com/watch?v=PisA-OPisUY&ab_channel=CosdenSolutions"
+                  hashtag="#React"
+                >
+                  <img src="/wfacebook.svg" alt="" />
+                </FacebookShareButton>
               </div>
             </div>
           </div>
