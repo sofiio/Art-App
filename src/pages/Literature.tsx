@@ -44,6 +44,8 @@ function Literature() {
         textColor="black"
         hideFirstImageMobile={false}
         SecondImageMobile={true}
+        hideLogo = {false}
+        hideSecondLogo = {true}
       />
     </>
   );

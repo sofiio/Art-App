@@ -6,6 +6,8 @@ interface FooterProps {
   textColor: "white" | "black";
   hideFirstImageMobile: boolean;
   SecondImageMobile: boolean;
+  hideLogo: boolean;
+  hideSecondLogo: boolean;
 }
 
 function Footer({
@@ -13,9 +15,13 @@ function Footer({
   textColor,
   hideFirstImageMobile,
   SecondImageMobile,
+  hideLogo,
+  hideSecondLogo,
 }: FooterProps) {
   const firstImageClass = hideFirstImageMobile ? "hidden" : ""; // Add the hidden class conditionally
   const SecondImageClass = SecondImageMobile ? "hidden" : ""; // Add the hidden class conditionally
+  const logoClass = hideLogo ? "hidden" : "";
+  const logoClass1 = hideSecondLogo ? "hidden" : "";
 
   const navigate = useNavigate();
   const handleAboutUsClick = () => {
@@ -49,11 +55,12 @@ function Footer({
         <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0 mx-auto">
           <div className="h-[408px] xl:border-b xl:flex xl:flex-row pt-[80px]">
             <div className="2xl:w-[500px] w-[340px] md:w-[700px] sm:w-[500px] h-[223px] space-y-4 mx-auto xl:mx-0">
-              <h1
-                className={`xl:text-[18px] text-[16px] font-bold md:text-black text-${textColor}`}
-              >
-                Logo
-              </h1>
+              <img src="/log1.svg" alt="" className={`md:block ${logoClass}`} />
+              <img
+                src="/wlogo1.svg"
+                alt=""
+                className={`md:hidden ${logoClass1}`}
+              />
               <h1 className={`md:text-black text-${textColor}`}>
                 Are you ready to embark on a journey through the history of
                 theater, literature, and music? Join Us Today!{" "}
@@ -113,7 +120,7 @@ function Footer({
                   </h1>
                 </Link>
               </div>
-              <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[240px] space-y-4">
+              <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[240px] space-y-4 mt-4 md:mt-0">
                 <h1 className={`font-semibold md:text-black text-${textColor}`}>
                   Follow Us
                 </h1>

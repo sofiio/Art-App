@@ -77,6 +77,8 @@ function Landing() {
         textColor="white"
         hideFirstImageMobile={true}
         SecondImageMobile={false}
+        hideLogo = {true}
+        hideSecondLogo = {false}
       />
     </div>
   );
