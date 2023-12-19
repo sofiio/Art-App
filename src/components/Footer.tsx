@@ -77,7 +77,7 @@ function Footer({
               </h1>
             </div>
 
-            <div className="flex flex-row mt-[25px] xl:mt-0 justify-center xl:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
+            <div className="flex flex-row mt-[25px] xl:mt-0 justify-center md:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] font-sans text-[14px] flex flex-col space-y-4">
                 <Link to="/AboutUs">
                   <h1

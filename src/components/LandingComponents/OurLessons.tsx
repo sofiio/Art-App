@@ -57,24 +57,23 @@ const OurLessons: React.FC<HeadingProps> = ({
                 marginLeft="ml-0" // customize margin-left if needed
               />
             </div>
-            <Link to="/Syllabus">
-              <button
-                className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
+            <button
+              onClick={handleMusClick}
+              className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
+            >
+              <h1
+                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
               >
-                <h1
-                  className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
-                >
-                  Read more
-                </h1>
-                <div className="ml-[8px]">
-                  <img
-                    src={imgSrc}
-                    alt={imgAlt}
-                    className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                  />
-                </div>
-              </button>
-            </Link>
+                Read more
+              </h1>
+              <div className="ml-[8px]">
+                <img
+                  src={imgSrc}
+                  alt={imgAlt}
+                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
+                />
+              </div>
+            </button>
           </div>
         </Link>
         <Link to="/Literature">
@@ -89,24 +88,23 @@ const OurLessons: React.FC<HeadingProps> = ({
                 marginLeft="ml-0" // customize margin-left if needed
               />
             </div>
-            <Link to="/Syllabus">
-              <button
-                className={`flex mt-[45px] lg:mt-[110px] md:mt-[110px] 2xl:mt-[20px] items-center w-[109px] h-[24px]`}
+            <button
+              onClick={handleLitClick}
+              className={`flex mt-[45px] lg:mt-[110px] md:mt-[110px] 2xl:mt-[20px] items-center w-[109px] h-[24px]`}
+            >
+              <h1
+                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
               >
-                <h1
-                  className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
-                >
-                  Read more
-                </h1>
-                <div className="ml-[8px]">
-                  <img
-                    src={imgSrc}
-                    alt={imgAlt}
-                    className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                  />
-                </div>
-              </button>
-            </Link>
+                Read more
+              </h1>
+              <div className="ml-[8px]">
+                <img
+                  src={imgSrc}
+                  alt={imgAlt}
+                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
+                />
+              </div>
+            </button>
           </div>
         </Link>
 
@@ -123,24 +121,23 @@ const OurLessons: React.FC<HeadingProps> = ({
                 onClick={handleTheatrClick}
               />
             </div>
-            <Link to="/Syllabus">
-              <button
-                className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
+            <button
+              onClick={handleTheatrClick}
+              className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
+            >
+              <h1
+                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
               >
-                <h1
-                  className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
-                >
-                  Read more
-                </h1>
-                <div className="ml-[8px]">
-                  <img
-                    src={imgSrc}
-                    alt={imgAlt}
-                    className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                  />
-                </div>
-              </button>
-            </Link>
+                Read more
+              </h1>
+              <div className="ml-[8px]">
+                <img
+                  src={imgSrc}
+                  alt={imgAlt}
+                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
+                />
+              </div>
+            </button>
           </div>
         </Link>
       </div>

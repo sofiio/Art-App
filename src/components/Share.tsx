@@ -29,8 +29,8 @@ function Share() {
         </div>
       </div>
       <div className="mt-[80px] flex flex-col items-center">
-        <h1 className="font-bold md:text-[32px] text-[24px] font-quinapple md:font-sans">
-          have questions?
+        <h1 className="font-bold md:text-[32px] text-[24px] font-quinapple md:font-sans flex">
+          have questions<h1 className="font-sans font-light md:font-bold">?</h1>
         </h1>
         <Link to="/ContactUs">
           <CustomButton

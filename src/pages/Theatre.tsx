@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Share from "../components/Share";
 import SharedComponent from "../components/SharedComponent";
+import Syllabus from "../components/Syllabus";
 import Title from "../components/Title";
 
 function Theatre() {
@@ -32,6 +33,7 @@ function Theatre() {
       <SharedComponent sections={sections} coverImage={coverImage}
         seperateText={seperateText} />
       <Share />
+      <Syllabus/>
       <Footer
         mobileBgColor="white"
         textColor="black"

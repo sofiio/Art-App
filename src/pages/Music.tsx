@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Share from "../components/Share";
 import SharedComponent from "../components/SharedComponent";
+import Syllabus from "../components/Syllabus";
 import Title from "../components/Title";
 
 function Music() {
@@ -34,6 +35,7 @@ function Music() {
         seperateText={seperateText}
       />
       <Share />
+      <Syllabus/>
       <Footer
         mobileBgColor="white"
         textColor="black"
