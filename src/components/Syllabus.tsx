@@ -1,6 +1,72 @@
 import { useState } from "react";
 
-function Syllabus() {
+interface SyllabusSectionProps {
+  title: string;
+  duration: string;
+  module1Title: string;
+  module1Text: string;
+  module2Title: string;
+  module2Text: string;
+  module3Title: string;
+  module3Text: string;
+  module4Title: string;
+  module4Text: string;
+  module5Title: string;
+  module5Text: string;
+  module6Title: string;
+  module6Text: string;
+  module7Title: string;
+  module7Text: string;
+  module8Title: string;
+  module8Text: string;
+  module9Title: string;
+  module9Text: string;
+  module10Title: string;
+  module10Text: string;
+  assasmentTitle: string;
+  assasmentText: string;
+  module11Title: string;
+  module11Text: string;
+  module12Title: string;
+  module12Text: string;
+  additionalTitle: string;
+  assasmentText2: string;
+  assasmentText3: string;
+}
+
+const Syllabus: React.FC<SyllabusSectionProps> = ({
+  title,
+  duration,
+  module1Title,
+  module1Text,
+  module2Title,
+  module2Text,
+  module3Title,
+  module3Text,
+  module4Title,
+  module4Text,
+  module5Title,
+  module5Text,
+  module6Title,
+  module6Text,
+  module7Title,
+  module7Text,
+  module8Title,
+  module8Text,
+  module9Title,
+  module9Text,
+  module10Title,
+  module10Text,
+  module11Title,
+  module11Text,
+  module12Title,
+  module12Text,
+  assasmentTitle,
+  assasmentText,
+  additionalTitle,
+  assasmentText2,
+  assasmentText3,
+}) => {
   const [isSyllabusVisible, setIsSyllabusVisible] = useState(false);
   const [isSyllabusRotated, setIsSyllabusRotated] = useState(false);
 
@@ -10,14 +76,19 @@ function Syllabus() {
   };
 
   return (
-    <div className="lg:w-[768px] md:w-[700px] w-[343px] sm:w-[500px] mx-auto mt-[170px]">
+    <div className="xl:w-[952px] md:w-[700px] w-[343px] sm:w-[500px] mx-auto mt-[170px]">
       <div className="lg:text-[32px] text-[24px] sm:text-[28px] md:text-[30px] font-bold mx-auto  w-[200px] flex justify-center">
         <h1>SYLLABUS</h1>
       </div>
       <div className=" flex justify-between mt-[60px] items-center">
-        <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold ">
-          Course Literature
-        </h1>
+        <div className="flex md:w-[700px] xl:w-[952px]">
+          <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold ">
+            {title}
+          </h1>
+          <h1 className="hidden xl:block lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold ">
+            {additionalTitle}
+          </h1>
+        </div>
         <img
           onClick={toggleDropdown}
           src="/blarow.svg"
@@ -31,127 +102,118 @@ function Syllabus() {
       {isSyllabusVisible && (
         <div>
           <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold mt-[40px]">
-            Course Duration: 10 weeks (20 sessions)
+            {duration}
           </h1>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 1: Introduction to Literary History
+              {module1Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Overview of the course objectives and structure Understanding the
-              significance of studying literary history Exploring the major
-              literary periods and movements.
+              {module1Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 2: Ancient Literature
+              {module2Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Survey of ancient literary traditions (e.g., Mesopotamian, Greek,
-              Roman) Analysis of epic poems, myths, and oral traditions
-              Discussion on the role of literature in ancient societies
+              {module2Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 3: Medieval Literature
+              {module3Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Examination of medieval literary works (e.g., Chaucer, Dante)
-              Exploration of religious and chivalric themes Understanding the
-              impact of societal changes on literature
+              {module3Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 4: Renaissance and Enlightenment
+              {module4Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Study of literary developments during the Renaissance Analysis of
-              Enlightenment philosophy in literature Exploration of influential
-              figures like Shakespeare and Voltaire
+              {module4Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 5: Romanticism and Realism
+              {module5Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Overview of the Romantic movement and its impact on literature
-              Analysis of realist literature and its social context Discussion
-              on the emergence of the novel as a literary form
+              {module5Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 6: Modernism and Postmodernism
+              {module6Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Exploration of modernist and postmodernist literature Analysis of
-              experimental forms and narrative techniques Discussion on the
-              impact of historical events on literary expression.
+              {module6Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 7: Global Perspectives
+              {module7Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Survey of literature from diverse cultures and regions Examination
-              of postcolonial literature and voices from the margins Discussion
-              on the interconnectedness of world literature
+              {module7Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 8: Contemporary Literature
+              {module8Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Analysis of contemporary literary trends Exploration of the
-              digital ages impact on literature Discussion on current debates
-              and challenges in the literary world.
+              {module8Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 9: Literary Criticism and Theory
+              {module9Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Introduction to key literary theories (e.g., structuralism,
-              postcolonial theory) Application of critical approaches to
-              selected literary works Encouraging students to develop their
-              analytical skills
+              {module9Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
-              Module 10: Interactive Workshops
+              {module10Title}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Group discussions on specific literary topics Creative writing
-              exercises inspired by various literary periods Peer review
-              sessions to foster collaborative learning
+              {module10Text}
+            </h1>
+          </div>
+          <div>
+            <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
+              {module11Title}
+            </h1>
+            <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
+              {module11Text}
+            </h1>
+          </div>
+          <div>
+            <h1 className="lg:text-[32px] font-bold mt-[40px] text-[22px] sm:text-[24px] md:text-[28px]">
+              {module12Title}
+            </h1>
+            <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
+              {module12Text}
             </h1>
           </div>
           <div>
             <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold mt-[40px]">
-              Assessment
+              {assasmentTitle}
             </h1>
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
-              Weekly quizzes on assigned readings Participation in class
-              discussions and activities Mid-term and final projects: Research
-              papers or creative projects exploring specific literary themes or
-              periods By the end of the course, participants will have gained a
-              nuanced understanding of the history of literature, honed critical
-              thinking skills, and developed an appreciation for the diverse
-              cultural expressions that have shaped the world of letters.
+              {assasmentText}
             </h1>
+            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">{assasmentText2}</h1>
+            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">{assasmentText3}</h1>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Syllabus;
