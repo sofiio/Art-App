@@ -27,6 +27,11 @@ function Header() {
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
+  const handleGalleryClick = () => {
+    navigate("/Gallery");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   const handleHomeClick = () => {
     navigate("/");
     window.scrollTo(0, 0); // Scroll to the top of the page
@@ -67,7 +72,11 @@ function Header() {
               Literature
             </h1>
           </Link>
-          <h1 className="cursor-pointer">Gallery</h1>
+          <Link to="/Gallery">
+            <h1 onClick={handleGalleryClick} className="cursor-pointer">
+              Gallery
+            </h1>
+          </Link>
           <CustomButton
             text="Get started"
             textColor="text-black"

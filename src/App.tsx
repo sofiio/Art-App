@@ -5,6 +5,7 @@ import Theatre from "./pages/Theatre";
 import Literature from "./pages/Literature";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import Gallery from "./pages/Gallery";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/Literature" element={<Literature/>} />
       <Route path="/AboutUs" element={<AboutUs/>} />
       <Route path="/ContactUs" element={<ContactUs/>} />
+      <Route path="/Gallery" element={<Gallery/>} />
       </Routes>
     </BrowserRouter>
     </>
