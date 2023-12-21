@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Define an interface for the component props
 interface HamburgerMenuProps {
@@ -9,6 +9,34 @@ interface HamburgerMenuProps {
 
 // Use the interface as the type for the props
 const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
+  const navigate = useNavigate();
+  const handleAboutUsClick = () => {
+    navigate("/AboutUs");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+  const handleTheatreClick = () => {
+    navigate("/Theatre");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleMusicClick = () => {
+    navigate("/Music");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+  const handleLiteratureClick = () => {
+    navigate("/Literature");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleGalleryClick = () => {
+    navigate("/Gallery");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+  const handleHomeClick = () => {
+    navigate("/");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <>
       <div
@@ -38,22 +66,34 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
         <nav>
           <ul className="flex flex-col p-4 mt-16 space-y-8">
             <Link to="/">
-              <li className=" cursor-pointer">Home</li>{" "}
+              <li onClick={handleHomeClick} className=" cursor-pointer">
+                Home
+              </li>{" "}
             </Link>
             <Link to="/AboutUs">
-              <li className=" cursor-pointer">About Us</li>{" "}
+              <li onClick={handleAboutUsClick} className=" cursor-pointer">
+                About Us
+              </li>{" "}
             </Link>
             <Link to="/Theatre">
-              <li className=" cursor-pointer">Theatre</li>{" "}
+              <li onClick={handleTheatreClick} className=" cursor-pointer">
+                Theatre
+              </li>{" "}
             </Link>
             <Link to="/Music">
-              <li className=" cursor-pointer">Music</li>{" "}
+              <li onClick={handleMusicClick} className=" cursor-pointer">
+                Music
+              </li>{" "}
             </Link>
             <Link to="/Literature">
-              <li className=" cursor-pointer">Literature</li>{" "}
+              <li onClick={handleLiteratureClick} className=" cursor-pointer">
+                Literature
+              </li>{" "}
             </Link>
             <Link to="/Gallery">
-              <li className=" cursor-pointer">Gallery</li>{" "}
+              <li onClick={handleGalleryClick} className=" cursor-pointer">
+                Gallery
+              </li>{" "}
             </Link>
           </ul>
         </nav>

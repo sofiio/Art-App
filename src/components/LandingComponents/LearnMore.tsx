@@ -41,6 +41,7 @@ function LearnMore() {
             imgSrc="/vec.svg"
             border="border-none"
             hoverEffect="hover:bg-white hover:text-black hover:border hover:border-black"
+            onClick={handleAboutClick}
           />
         </Link>
       </div>

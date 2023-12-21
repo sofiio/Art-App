@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -6,8 +7,21 @@ function Gallery() {
     <>
       <Header />
       <div className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] mx-auto">
-        <div className="flex justify-center pt-8 pb-8">
-          <h1 className="lg:text-[48px] text-[14px] sm:text-[22px] md:text-[32px] font-bold">Immage Gallery</h1>
+        <div className="flex md:justify-center pt-8 pb-8">
+          <div className="lg:w-[768px] md:w-[700px] w-[343px] sm:w-[500px] mx-auto">
+            <div className="flex justify-between md:justify-center w-[230px] sm:w-[330px] lg:w-[768px] md:w-[700px]">
+              <Link to="/">
+                <img
+                  src="/Arro.svg"
+                  alt=""
+                  className="block md:hidden cursor-pointer"
+                />
+              </Link>
+              <h1 className="lg:text-[48px] text-[14px] sm:text-[22px] md:text-[32px] font-bold">
+                Immage Gallery
+              </h1>
+            </div>
+          </div>
         </div>
         <div className="flex justify-between 2xl:w-[1312px] lg:w-[900px] w-[343px] sm:w-[500px] md:w-[700px] mx-auto ">
           <img
