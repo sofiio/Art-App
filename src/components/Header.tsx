@@ -38,7 +38,7 @@ function Header() {
   };
 
   return (
-    <div className="font-sans sticky border-b border-black top-0 z-10 w-full h-[55px] xl:h-[72px] mx-auto bg-black ">
+    <div className="z-20 font-sans sticky border-b border-black top-0 w-full h-[55px] xl:h-[72px] mx-auto bg-black ">
       <div
         className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0
        flex mx-auto justify-between items-center h-full"
