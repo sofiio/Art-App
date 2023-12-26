@@ -6,6 +6,8 @@ import Header from "../components/Header";
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const totalImages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
   const handleClick = (imageSrc: string) => {
     setSelectedImage(imageSrc);
   };
@@ -14,6 +16,20 @@ const Gallery: React.FC = () => {
     setSelectedImage(null);
   };
 
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+
+  const showNextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % totalImages.length;
+    setSelectedImage(`/${nextIndex + 1}p.png`);
+    setCurrentImageIndex(nextIndex);
+  };
+
+  const showPrevImage = () => {
+    const prevIndex =
+      (currentImageIndex - 1 + totalImages.length) % totalImages.length;
+    setSelectedImage(`/${prevIndex + 1}p.png`);
+    setCurrentImageIndex(prevIndex);
+  };
   return (
     <>
       <Header />
@@ -129,14 +145,28 @@ const Gallery: React.FC = () => {
 
       {selectedImage && (
         <div
-          className="fixed top-0 z-10 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75"
+          className="fixed top-0 z-10 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-90"
           onClick={handleClose}
         >
           <img
             src={selectedImage}
             alt=""
-            className="xl:w-[900px] lg:w-[700px] sm:w-[450px] w-[320px] md:w-[550px] cursor-pointer lg:mt-12 rounded-md lg:rounded-none"
+            className="xl:w-[800px] 2xl:w-[900px] lg:w-[700px] sm:w-[450px] w-[320px] md:w-[550px] cursor-pointer lg:mt-16 rounded-md lg:rounded-none"
           />
+          <div className="mt-2 flex items-center justify-between md:justify-center sm:w-[450px] w-[320px] space-x-12">
+            <img
+              src="/rarrow.svg"
+              alt=""
+              className=" cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
+              onClick={showNextImage}
+            />
+            <img
+              src="/larrow.svg"
+              alt=""
+              className=" cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
+              onClick={showPrevImage}
+            />
+          </div>
         </div>
       )}
 
