@@ -9,7 +9,7 @@ function OurTeam() {
           Our Team
         </h1>
         <div className="flex flex-col lg:flex-row w-[375px] lg:w-[597px] h-[340px] lg:mt-[72px] mt-[48px] items-center lg:items-start">
-          <div className="w-[251px] bg-CardColor1/30 lg:bg-black  h-[340px] rounded-[21px] lg:rounded-none border lg:border-none border-white flex flex-col items-center justify-center p-6">
+          <div className="w-[251px] bg-CardColor1/30 lg:bg-black  h-[340px] rounded-[21px]  border border-white/40 flex flex-col items-center justify-center p-6">
             <img src="/ab1.png" alt="" />
             <div>
               <h1 className="text-[20px] font-semibold text-white mt-[24px] ">
@@ -29,7 +29,7 @@ function OurTeam() {
               </div>
             </div>
           </div>
-          <div className="w-[251px] mt-[95px] bg-CardColor1/30 lg:bg-black border lg:border-none border-white rounded-[21px] lg:rounded-none lg:mt-0 lg:ml-[95px] h-[340px] flex flex-col items-center justify-center p-6 lg:p-0">
+          <div className="w-[251px] mt-[95px] bg-CardColor1/30 lg:bg-black border  border-white/40 rounded-[21px] lg:mt-0 lg:ml-[95px] h-[340px] flex flex-col items-center justify-center p-6 lg:p-0">
             <img src="/ab2.png" alt="" />
             <div>
               <h1 className="text-[20px] font-semibold text-white mt-[24px] ">

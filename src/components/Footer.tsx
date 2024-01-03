@@ -23,6 +23,8 @@ function Footer({
   const logoClass = hideLogo ? "hidden" : "";
   const logoClass1 = hideSecondLogo ? "hidden" : "";
 
+
+  // გვერდი დასაწყისიდან რომ ჩაიტვირთოს და არა შუიდან ან ქვემოდან
   const navigate = useNavigate();
   const handleAboutUsClick = () => {
     navigate("/AboutUs");
@@ -47,6 +49,11 @@ function Footer({
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
+  const handlePrivacyPolicyClick = () => {
+    navigate("/PrivacyPolicy");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <>
       <div
@@ -68,11 +75,14 @@ function Footer({
               <FormComponent />
               <h1 className={`text-[12px] md:text-black text-${textColor}`}>
                 By subscribing you agree to with our{" "}
-                <span
-                  className={`underline cursor-pointer md:text-black text-${textColor}`}
-                >
-                  Privacy Policy
-                </span>{" "}
+                <Link to="/PrivacyPolicy">
+                  <span
+                    onClick={handlePrivacyPolicyClick}
+                    className={`underline cursor-pointer md:text-black text-${textColor}`}
+                  >
+                    Privacy Policy
+                  </span>{" "}
+                </Link>
                 and provide consent to receive updates from our company.
               </h1>
             </div>
@@ -162,9 +172,14 @@ function Footer({
               <h1 className="text-black">© 2023.All rights reserved.</h1>
             </div>
             <div className="flex space-x-4">
-              <h1 className="underline cursor-pointer text-black">
-                Privacy Policy
-              </h1>
+              <Link to="/PrivacyPolicy">
+                <h1
+                  onClick={handlePrivacyPolicyClick}
+                  className="underline cursor-pointer text-black"
+                >
+                  Privacy Policy
+                </h1>
+              </Link>
               <h1 className="underline cursor-pointer text-black">
                 Terms of Service
               </h1>

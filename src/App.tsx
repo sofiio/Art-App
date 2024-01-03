@@ -6,6 +6,7 @@ import Literature from "./pages/Literature";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/Gallery";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/AboutUs" element={<AboutUs/>} />
       <Route path="/ContactUs" element={<ContactUs/>} />
       <Route path="/Gallery" element={<Gallery/>} />
+      <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
       </Routes>
     </BrowserRouter>
     </>
