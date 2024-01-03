@@ -18,18 +18,23 @@ const Gallery: React.FC = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-  const showNextImage = () => {
+  const showNextImage = (e: React.MouseEvent<HTMLImageElement>) => {
+    // Stop event propagation to prevent handleClose from being triggered
+    e.stopPropagation();
     const nextIndex = (currentImageIndex + 1) % totalImages.length;
     setSelectedImage(`/${nextIndex + 1}p.png`);
     setCurrentImageIndex(nextIndex);
   };
 
-  const showPrevImage = () => {
+  const showPrevImage = (e: React.MouseEvent<HTMLImageElement>) => {
+    // Stop event propagation to prevent handleClose from being triggered
+    e.stopPropagation();
     const prevIndex =
       (currentImageIndex - 1 + totalImages.length) % totalImages.length;
     setSelectedImage(`/${prevIndex + 1}p.png`);
     setCurrentImageIndex(prevIndex);
   };
+
   return (
     <>
       <Header />
@@ -157,13 +162,13 @@ const Gallery: React.FC = () => {
             <img
               src="/rarrow.svg"
               alt=""
-              className=" cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
+              className="z-10 cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
               onClick={showNextImage}
             />
             <img
               src="/larrow.svg"
               alt=""
-              className=" cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
+              className="cursor-pointer w-[31px] h-[31px] sm:w-[40px] sm:h-[40px] lg:w-auto lg:h-auto"
               onClick={showPrevImage}
             />
           </div>

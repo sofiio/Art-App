@@ -7,12 +7,12 @@ function OurMission() {
             OUR MISSION
           </h1>
           <img
-            src="/rounded.png"
+            src="/chang.png"
             alt=""
             className="block sm:hidden mt-[24px]"
           />
           <img
-            src="/ffff.png"
+            src="/chang.png"
             alt=""
             className="hidden sm:block mt-[24px] w-[770px] 2xl:hidden h-[488px]"
           />
@@ -27,7 +27,7 @@ function OurMission() {
           </h1>
         </div>
         <div className="w-[628px] h-[488px] ml-[88px] hidden 2xl:block">
-          <img src="/ffff.png" alt="" />
+          <img src="/chang.png" alt="" />
         </div>
       </div>
     </div>

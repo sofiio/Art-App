@@ -35,7 +35,6 @@ function Theatre() {
         coverImage={coverImage}
         seperateText={seperateText}
       />
-      <Share />
       <Syllabus
         title="Course Theatre"
         duration="Course Duration: 12 weeks (24 sessions)"
@@ -95,6 +94,7 @@ function Theatre() {
         assasmentText3=" Final project: Performance or presentation of scenes, monologues, or an original short play By the end of the course, participants will have gained a comprehensive understanding of theatre&#39;s history, production processes, and acting techniques, fostering a deeper appreciation for the art form and providing a solid foundation for further exploration and engagement in the
         world of theatre."
       />
+      <Share />
       <Footer
         mobileBgColor="white"
         textColor="black"

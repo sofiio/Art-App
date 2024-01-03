@@ -52,7 +52,7 @@ const OurLessons: React.FC<HeadingProps> = ({
                 imgSrc="/dd1.svg"
                 imgAlt=""
                 h1Text="MUSIC"
-                buttonLabel="4 Months"
+                buttonLabel="10 Weeks"
                 h1TextColor={h1TextColor}
                 marginLeft="ml-0" // customize margin-left if needed
               />
@@ -83,7 +83,7 @@ const OurLessons: React.FC<HeadingProps> = ({
                 imgSrc="/dd2.svg"
                 imgAlt="Music Image"
                 h1Text="LITERATURE"
-                buttonLabel="4 Months"
+                buttonLabel="10 Weeks"
                 h1TextColor={h1TextColor}
                 marginLeft="ml-0" // customize margin-left if needed
               />
@@ -115,7 +115,7 @@ const OurLessons: React.FC<HeadingProps> = ({
                 imgSrc="/dd3.svg"
                 imgAlt="Music Image"
                 h1Text="THEATRE"
-                buttonLabel="4 Months"
+                buttonLabel="10 Weeks"
                 h1TextColor={h1TextColor}
                 marginLeft="ml-0" // customize margin-left if needed
                 onClick={handleTheatrClick}

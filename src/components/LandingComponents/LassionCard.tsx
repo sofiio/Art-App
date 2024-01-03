@@ -36,7 +36,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
           {h1Text}
         </h1>
         <CustomButton
-          text="4 Months"
+          text="10 Weeks"
           width="w-[76px]"
           height="h-[29px]"
           marginTop="md:mt-[16px]"

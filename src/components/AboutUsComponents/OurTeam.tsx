@@ -10,7 +10,7 @@ function OurTeam() {
         </h1>
         <div className="flex flex-col lg:flex-row w-[375px] lg:w-[597px] h-[340px] lg:mt-[72px] mt-[48px] items-center lg:items-start">
           <div className="w-[251px] bg-CardColor1/30 lg:bg-black  h-[340px] rounded-[21px] lg:rounded-none border lg:border-none border-white flex flex-col items-center justify-center p-6">
-            <img src="/giorgi.png" alt="" />
+            <img src="/ab1.png" alt="" />
             <div>
               <h1 className="text-[20px] font-semibold text-white mt-[24px] ">
                 Giorgi Tsituri
@@ -30,7 +30,7 @@ function OurTeam() {
             </div>
           </div>
           <div className="w-[251px] mt-[95px] bg-CardColor1/30 lg:bg-black border lg:border-none border-white rounded-[21px] lg:rounded-none lg:mt-0 lg:ml-[95px] h-[340px] flex flex-col items-center justify-center p-6 lg:p-0">
-            <img src="/teo.png" alt="" />
+            <img src="/ab2.png" alt="" />
             <div>
               <h1 className="text-[20px] font-semibold text-white mt-[24px] ">
                 Teo Tsotsolashvili

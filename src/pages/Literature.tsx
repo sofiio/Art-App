@@ -37,7 +37,7 @@ function Literature() {
         coverImage={coverImage}
         seperateText={seperateText}
       />
-      <Share />
+
       <Syllabus
         title=" Course Literature"
         duration=" Course Duration: 10 weeks (20 sessions)"
@@ -98,6 +98,7 @@ function Literature() {
         cultural expressions that have shaped the world of letters."
         assasmentText3=""
       />
+      <Share />
       <Footer
         mobileBgColor="white"
         textColor="black"

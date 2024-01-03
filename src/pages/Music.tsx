@@ -34,7 +34,7 @@ function Music() {
         coverImage={coverImage}
         seperateText={seperateText}
       />
-      <Share />
+
       <Syllabus
         title=" Course Music"
         duration=" Course Duration: 10 weeks (20 sessions)"
@@ -92,6 +92,7 @@ function Music() {
         modern music, particularly within the rock genre, and will have explored the cultural, social, and
         artistic dimensions of rock star fame."
       />
+      <Share />
       <Footer
         mobileBgColor="white"
         textColor="black"

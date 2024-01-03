@@ -14,7 +14,7 @@ function ChooseUs() {
             className="2xl:w-[372px] xl:w-[350px] xl:h-[350px] 2xl:h-[372px] w-[233px] h-[233px]"
           />
           <img
-            src="/saa.png"
+            src="/children.png"
             alt=""
             className="xl:mt-[147px] mt-[94px] xl:ml-[197px] ml-[124px] 2xl:w-[351px] xl:w-[300px] xl:h-[300px] 2xl:h-[349px] w-[210px] h-[210px] absolute top-0 left-0"
           />

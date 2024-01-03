@@ -76,11 +76,11 @@ const Syllabus: React.FC<SyllabusSectionProps> = ({
   };
 
   return (
-    <div className="xl:w-[952px] md:w-[700px] w-[343px] sm:w-[500px] mx-auto mt-[170px]">
+    <div className="xl:w-[952px] md:w-[700px] w-[343px] sm:w-[500px] mx-auto mt-[110px]">
       <div className="lg:text-[32px] text-[24px] sm:text-[28px] md:text-[30px] font-bold mx-auto  w-[200px] flex justify-center">
         <h1>SYLLABUS</h1>
       </div>
-      <div className=" flex justify-between mt-[60px] items-center">
+      <div className=" flex justify-between md:mt-[60px] mt-[50px] items-center">
         <div className="flex md:w-[700px] xl:w-[952px]">
           <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold ">
             {title}
@@ -207,8 +207,12 @@ const Syllabus: React.FC<SyllabusSectionProps> = ({
             <h1 className="lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
               {assasmentText}
             </h1>
-            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">{assasmentText2}</h1>
-            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">{assasmentText3}</h1>
+            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
+              {assasmentText2}
+            </h1>
+            <h1 className="mt-8 lg:text-[32px] text-[16px] sm:text-[22px] md:text-[26px]">
+              {assasmentText3}
+            </h1>
           </div>
         </div>
       )}
