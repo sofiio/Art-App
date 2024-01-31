@@ -105,11 +105,11 @@ const Faq: React.FC = () => {
       <div
         className={`2xl:w-[1440px] lg:w-[768px] md:w-[700px] w-[343px]  mx-auto bg-black  ${
           isDropdownVisible2
-            ? "xl:h-[1500px] md:h-[1450px] h-[1250px]"
+            ? "xl:h-[1500px] md:h-[1450px] h-[1245px]"
             : "xl:h-[1096px] h-[760px]"
         } ${
           isDropdownVisible1
-            ? "xl:h-[1500px] md:h-[1400px] h-[1250px]"
+            ? "xl:h-[1500px] md:h-[1400px] h-[1245px]"
             : "xl:h-[1096px] md:h-[1000px] h-[760px]"
         } flex flex-col items-center`}
       >
@@ -403,11 +403,11 @@ const Faq: React.FC = () => {
         <h1
           className={`text-white font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px]   ${
             isDropdownVisible2
-              ? "xl:mt-[450px] md:mt-[500px] mt-[380px] "
+              ? "xl:mt-[455px] md:mt-[500px] mt-[375px] "
               : "xl:mt-[50px] mt-[80px]"
           } ${
             isDropdownVisible1
-              ? "xl:mt-[400px] md:mt-[450px] mt-[280px] "
+              ? "xl:mt-[400px] md:mt-[450px] mt-[275px] "
               : "xl:mt-[50px] mt-[80px] "
           }`}
         >
