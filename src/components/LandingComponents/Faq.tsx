@@ -403,14 +403,12 @@ const Faq: React.FC = () => {
         <div
         
           className={`text-white  font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px]   ${
-            isDropdownVisible2
+            isDropdownVisible2 || isDropdownVisible1
               ? "xl:mt-[470px]  md:mt-[500px] mt-[350px] "
               : "xl:mt-[50px] mt-[80px]"
-          } ${
-            isDropdownVisible1
-              ? "xl:mt-0 md:mt-[450px] mt-0 "
-              : "xl:mt-0 mt-0 "
-          }`}
+          } 
+
+          `}
         >
           Still have questions<span className="font-sans "> ?</span>
         
