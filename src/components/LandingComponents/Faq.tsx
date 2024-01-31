@@ -85,10 +85,34 @@ const Faq: React.FC = () => {
     setIsRotated2(false);
     setIsRotated3(false);
   };
+  const handleMusicClick = () => {
+    navigate("/Music");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleLiteratureClick = () => {
+    navigate("/Literature");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
+  const handleTheatreClick = () => {
+    navigate("/Theatre");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
 
   return (
     <div className="w-full bg-black mt-16 xl:mt-0">
-      <div className="2xl:w-[1440px] lg:w-[768px] md:w-[700px] w-[343px]  mx-auto xl:h-[1096px] md:h-[1000px] h-[681px] flex flex-col items-center">
+      <div
+        className={`2xl:w-[1440px] lg:w-[768px] md:w-[700px] w-[343px]  mx-auto bg-black  ${
+          isDropdownVisible2
+            ? "xl:h-[1500px] md:h-[1450px] h-[1250px]"
+            : "xl:h-[1096px] h-[760px]"
+        } ${
+          isDropdownVisible1
+            ? "xl:h-[1500px] md:h-[1400px] h-[1250px]"
+            : "xl:h-[1096px] md:h-[1000px] h-[760px]"
+        } flex flex-col items-center`}
+      >
         <div className="xl:w-[768px] xl:mt-[112px] mt-[36px] h-[154px] flex items-center text-center">
           <h1 className="text-white md:text-[64px] text-[32px] font-quinapple">
             FREQUENTLY ASKED QUESTIONS
@@ -96,10 +120,12 @@ const Faq: React.FC = () => {
         </div>
         <div className="md:w-[700px] lg:w-[768px] flex flex-col items-center md:items-start  w-[343px] space-y-4 xl:space-y-0 h-[465px] mt-[32px] md:mt-[80px]">
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
-              <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
-                Question text goes here
-              </h1>
+            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+              <div className="w-[250px] sm:w-auto">
+                <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
+                  What are the classes schedules and Durations?
+                </h1>
+              </div>
               <img
                 src="/Icon.svg"
                 alt=""
@@ -120,20 +146,51 @@ const Faq: React.FC = () => {
               ></img>
             </div>
             {isDropdownVisible1 && (
-              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center flex md:items-start md:pt-[22px] justify-between sm:px-4 px-10 md:px-0">
+              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[370px] h-[370px] sm:h-[300px] bg-white md:bg-black text-black md:text-white flex items-start md:pt-[22px] justify-between sm:px-4 px-2 md:px-0">
                 {/* Your dropdown content goes here */}
-                <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
-                  Answer
-                </p>
+                <div className="w-[250px] sm:w-auto">
+                  <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
+                    <ul className="mt-2">
+                      Course Theatre: History, Production, and Acting
+                      Masterclasses
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 12 weeks (24 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class duration: 45 minutes
+                      </li>
+                    </ul>
+                    <ul className="mt-6">
+                      Course Music: History, Musical Genres, Legends
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 10 weeks (20 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class duration: 45 minutes
+                      </li>
+                    </ul>
+                    <ul className="mt-6">
+                      Course Literature: History, Major periods, World heritage
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 10 weeks (20 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class duration: 45 minutes
+                      </li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             )}
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
-              <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
-                Question text goes here
-              </h1>
+            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+              <div className="w-[250px] sm:w-auto">
+                <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
+                  How much do the classes cost?
+                </h1>
+              </div>
               <img
                 src="/Icon.svg"
                 alt=""
@@ -154,20 +211,63 @@ const Faq: React.FC = () => {
               ></img>
             </div>
             {isDropdownVisible2 && (
-              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center flex md:items-start md:pt-[22px] justify-between sm:px-4 px-10 md:px-0">
+              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[450px] h-[420px] bg-white md:bg-black text-black md:text-white flex items-start md:pt-[22px] justify-between sm:px-4 px-2 md:px-0">
                 {/* Your dropdown content goes here */}
-                <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
-                  Answer
-                </p>
+                <div className="w-[250px] sm:w-auto">
+                  <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
+                    <ul className="mt-2">
+                      Course Theatre: History, Production, and Acting
+                      Masterclasses
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 12 weeks (24 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class fee: $960
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Payment per class or per course
+                      </li>
+                    </ul>
+                    <ul className="mt-6">
+                      Course Music: History, Musical Genres, Legends
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 10 weeks (20 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class fee: $800
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Payment per class or per course
+                      </li>
+                    </ul>
+                    <ul className="mt-6">
+                      Course Literature: History, Major periods, World heritage
+                      <li className="md:text-[14px] text-[12px] mt-2">
+                        • Course Duration: 10 weeks (20 sessions)
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Class fee: $800
+                      </li>
+                      <li className="md:text-[14px] text-[12px]">
+                        • Payment per class or per course
+                      </li>
+                    </ul>
+                    <h1 className="mt-2 md:mt-6 text-red-500">
+                      Note: No additional material or resources needed
+                    </h1>
+                  </p>
+                </div>
               </div>
             )}
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
-              <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
-                Question text goes here
-              </h1>
+            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+              <div className="w-[250px] sm:w-auto">
+                <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
+                  Where do the lessons take place?
+                </h1>
+              </div>
               <img
                 src="/Icon.svg"
                 alt=""
@@ -188,20 +288,25 @@ const Faq: React.FC = () => {
               ></img>
             </div>
             {isDropdownVisible3 && (
-              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center flex md:items-start md:pt-[22px] justify-between sm:px-4 px-10 md:px-0">
+              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[71px] bg-white md:bg-black text-black md:text-white flex items-start md:pt-[22px] justify-between sm:px-4 px-2 md:px-0">
                 {/* Your dropdown content goes here */}
-                <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
-                  Answer
-                </p>
+                <div className="w-[250px] sm:w-auto">
+                  <p className="md:text-[18px] pt-2 md:pt-0 text-[12px] md:text-white font-bold font-sans ">
+                    Since we operate in 2 different states (NY & CT), we will
+                    provide locations to the specific groups accordingly
+                  </p>
+                </div>
               </div>
             )}
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
-              <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
-                Question text goes here
-              </h1>
+            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+              <div className="w-[250px] sm:w-auto">
+                <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
+                  What topics are cover in the classes?
+                </h1>
+              </div>
               <img
                 src="/Icon.svg"
                 alt=""
@@ -222,20 +327,47 @@ const Faq: React.FC = () => {
               ></img>
             </div>
             {isDropdownVisible4 && (
-              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center flex md:items-start md:pt-[22px] justify-between sm:px-4 px-10 md:px-0">
+              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] h-[71px] md:h-[91px] xl:h-[101px] bg-white md:bg-black text-black md:text-white flex items-start md:pt-[22px] pt-2 justify-between sm:px-4 px-2 md:px-0">
                 {/* Your dropdown content goes here */}
-                <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
-                  Answer
-                </p>
+                <div className="w-[250px] sm:w-auto">
+                  <ul className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
+                    <Link to="/Theatre">
+                      <li
+                        onClick={handleTheatreClick}
+                        className="hover:text-blue-400 cursor-pointer"
+                      >
+                        Course Theatre
+                      </li>
+                    </Link>
+                    <Link to="/Music">
+                      <li
+                        onClick={handleMusicClick}
+                        className="hover:text-blue-400 cursor-pointer"
+                      >
+                        Course Music
+                      </li>
+                    </Link>
+                    <Link to="/Literature">
+                      <li
+                        onClick={handleLiteratureClick}
+                        className="hover:text-blue-400 cursor-pointer"
+                      >
+                        Course literature
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
               </div>
             )}
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center md:items-start xl:pt-[22px] sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
-              <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
-                Question text goes here
-              </h1>
+            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+              <div className="w-[250px] sm:w-auto">
+                <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
+                  Is there Any prerequisite knowledge or skill required?
+                </h1>
+              </div>
               <img
                 src="/Icon.svg"
                 alt=""
@@ -256,17 +388,30 @@ const Faq: React.FC = () => {
               ></img>
             </div>
             {isDropdownVisible5 && (
-              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center flex md:items-start md:pt-[22px] justify-between sm:px-4 px-10 md:px-0">
+              <div className="md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[51px] sm:h-[41px] bg-white md:bg-black text-black md:text-white flex md:pt-[22px] pt-2 justify-between sm:px-4 px-2 md:px-0">
                 {/* Your dropdown content goes here */}
-                <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
-                  Answer
-                </p>
+                <div className="w-[250px] sm:w-auto">
+                  <p className="md:text-[18px] text-[12px] md:text-white font-bold font-sans ">
+                    NO entry requirements or any prior knowledge or skills
+                    needed for the classes
+                  </p>
+                </div>
               </div>
             )}
           </div>
         </div>
-        <h1 className="text-white font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px] mt-[80px] xl:mt-[50px]">
-          Still have questions<span className="font-sans"> ?</span>
+        <h1
+          className={`text-white font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px]   ${
+            isDropdownVisible2
+              ? "xl:mt-[450px] md:mt-[500px] mt-[380px] "
+              : "xl:mt-[50px] mt-[80px]"
+          } ${
+            isDropdownVisible1
+              ? "xl:mt-[400px] md:mt-[450px] mt-[280px] "
+              : "xl:mt-[50px] mt-[80px] "
+          }`}
+        >
+          Still have questions<span className="font-sans "> ?</span>
         </h1>
         <Link to="/ContactUs">
           <div className="mb-20 xl:mb-0">

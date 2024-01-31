@@ -23,7 +23,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
           </h1>
         </div>
         <div className="flex xl:ml-[32px] ml-[24px] xl:mt-[32px] mt-[36px] items-center">
-          <img src={avatarSrc} alt={`Avatar of ${authorName}`} />
+          <img src={avatarSrc} alt={`Avatar of ${authorName}`} className="w-[56px] h-[56px]" />
           <h1 className="text-white font-semibold ml-[16px]">{authorName}</h1>
         </div>
       </div>

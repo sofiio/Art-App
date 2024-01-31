@@ -2,6 +2,7 @@ import { z, ZodType } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 type FormData = {
   firstName: string;
@@ -83,6 +84,11 @@ function ContactUsForm() {
       // Handle network error
       console.error("Network error:", error);
     }
+  };
+  const navigate = useNavigate();
+  const handlePrivacyPolicyClick = () => {
+    navigate("/PrivacyPolicy");
+    window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
   return (
@@ -181,14 +187,17 @@ function ContactUsForm() {
                   errors.termsCheckbox ? "border-red-500" : ""
                 }`}
               />
-              <label
-                htmlFor="termsCheckbox"
-                className={`cursor-pointer text-[14px] font-medium underline ${
-                  errors.termsCheckbox ? "text-red-500" : ""
-                }`}
-              >
-                I accept the Terms
-              </label>
+              <Link to="/PrivacyPolicy">
+                <label
+                  onClick={handlePrivacyPolicyClick}
+                  htmlFor="termsCheckbox"
+                  className={`cursor-pointer text-[14px] font-medium underline ${
+                    errors.termsCheckbox ? "text-red-500" : ""
+                  }`}
+                >
+                  I accept the Terms
+                </label>
+              </Link>
               {errors.termsCheckbox && (
                 <span className="text-red-600">
                   {/* {errors.termsCheckbox.message} */}

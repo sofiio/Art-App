@@ -1,38 +1,94 @@
-import { Link } from "react-router-dom";
 import LassionCard from "./LassionCard";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+interface ImageData {
+  id: number;
+  url:any;
+  attributes: {
+    name: string;
+    alternativeText: string | null;
+    caption: string | null;
+    width: number;
+    height: number;
+    formats: any | null;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: string | null;
+    provider: string;
+    provider_metadata: any | null;
+    createdAt: string;
+    updatedAt: string;
+  };
+}
+
+interface Lesson {
+  id: number;
+  attributes: {
+    duration: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    title: string;
+    image: {
+      data: ImageData;
+      
+    };
+  };
+}
 
 interface HeadingProps {
   color: string;
   readMoreText: string;
   h1TextColor: string;
-  imgSrc: string;
-  imgAlt: string;
 }
 
 const OurLessons: React.FC<HeadingProps> = ({
   color,
   readMoreText,
   h1TextColor,
-  imgAlt,
-  imgSrc,
 }) => {
   const navigate = useNavigate();
+  const [lessons, setLessons] = useState<Lesson[]>([]);
 
-  const handleMusClick = () => {
-    navigate("/Music");
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:1337/api/our-lessons?populate=*"
+        );
+        setLessons(response.data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleLessonClick = (lessonId: number) => {
+    // Handle the click based on the lesson id
+    switch (lessonId) {
+      case 1:
+        navigate("/Music");
+        break;
+      case 2:
+        navigate("/Literature");
+        break;
+      case 3:
+        navigate("/Theatre");
+        break;
+      default:
+        // Handle other cases if needed
+        break;
+    }
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
-  const handleLitClick = () => {
-    navigate("/Literature");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleTheatrClick = () => {
-    navigate("/Theatre");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
 
   return (
     <div
@@ -44,102 +100,40 @@ const OurLessons: React.FC<HeadingProps> = ({
       >
         OUR LESSONS
       </h1>
-      <div className="2xl:w-[1312px] xl:w-[1100px] w-[355px] md:w-[747px] lg:w-[900px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[50px] mt-4 md:mt-8 flex justify-between overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 xl:p-0">
-        <Link to="/Music">
-          <div className="">
-            <div onClick={handleMusClick}>
-              <LassionCard
-                imgSrc="/dd1.svg"
-                imgAlt=""
-                h1Text="MUSIC"
-                buttonLabel="10 Weeks"
-                h1TextColor={h1TextColor}
-                marginLeft="ml-0" // customize margin-left if needed
-              />
-            </div>
-            <button
-              onClick={handleMusClick}
-              className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
-            >
-              <h1
-                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
-              >
-                Read more
-              </h1>
-              <div className="ml-[8px]">
-                <img
-                  src={imgSrc}
-                  alt={imgAlt}
-                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
+      <div className="2xl:w-[1312px] xl:w-[1100px] w-[355px] md:w-[747px] lg:w-[900px] sm:w-[500px] h-[451px] 2xl:mt-[80px] xl:mt-[50px] mt-4 md:mt-8 flex justify-between overflow-x-auto overflow-y-hidden example scrollbar-hide p-4 space-x-4 lg:space-x-8 md:p-2">
+        {lessons.map((lesson) => (
+          <div key={lesson.id}>
+            <div className="">
+              <div onClick={() => handleLessonClick(lesson.id)}>
+                <LassionCard
+                  imgSrc={lesson.attributes.image.data.attributes.url}
+                  imgAlt=""
+                  h1Text={lesson.attributes.title}
+                  buttonLabel={lesson.attributes.duration}
+                  h1TextColor={h1TextColor}
+                  marginLeft="ml-0" // customize margin-left if needed
                 />
               </div>
-            </button>
-          </div>
-        </Link>
-        <Link to="/Literature">
-          <div className="lg:ml-[32px] ml-[15px]">
-            <div onClick={handleLitClick}>
-              <LassionCard
-                imgSrc="/dd2.svg"
-                imgAlt="Music Image"
-                h1Text="LITERATURE"
-                buttonLabel="10 Weeks"
-                h1TextColor={h1TextColor}
-                marginLeft="ml-0" // customize margin-left if needed
-              />
-            </div>
-            <button
-              onClick={handleLitClick}
-              className={`flex mt-[45px] lg:mt-[110px] md:mt-[110px] 2xl:mt-[20px] items-center w-[109px] h-[24px]`}
-            >
-              <h1
-                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
+              <button
+                onClick={() => handleLessonClick(lesson.id)}
+                className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
               >
-                Read more
-              </h1>
-              <div className="ml-[8px]">
-                <img
-                  src={imgSrc}
-                  alt={imgAlt}
-                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                />
-              </div>
-            </button>
-          </div>
-        </Link>
-
-        <Link to="/Theatre">
-          <div className="ml-[32px] md:ml-[15px] xl:ml-[32px]">
-            <div onClick={handleTheatrClick}>
-              <LassionCard
-                imgSrc="/dd3.svg"
-                imgAlt="Music Image"
-                h1Text="THEATRE"
-                buttonLabel="10 Weeks"
-                h1TextColor={h1TextColor}
-                marginLeft="ml-0" // customize margin-left if needed
-                onClick={handleTheatrClick}
-              />
+                <h1
+                  className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
+                >
+                  Read more
+                </h1>
+                <div className="ml-[8px]">
+                  {/* <img
+                    src={imgSrc}
+                    alt={imgAlt}
+                    className="w-[18px] h-[15px] md:w-auto md:h-auto"
+                  /> */}
+                </div>
+              </button>
             </div>
-            <button
-              onClick={handleTheatrClick}
-              className={`flex mt-[45px] 2xl:mt-[20px] lg:mt-[110px] md:mt-[110px] items-center w-[109px] h-[24px]`}
-            >
-              <h1
-                className={`text-${readMoreText} text-[12px] md:text-[16px] font-sans`}
-              >
-                Read more
-              </h1>
-              <div className="ml-[8px]">
-                <img
-                  src={imgSrc}
-                  alt={imgAlt}
-                  className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                />
-              </div>
-            </button>
           </div>
-        </Link>
+        ))}
       </div>
     </div>
   );

@@ -23,7 +23,6 @@ function Footer({
   const logoClass = hideLogo ? "hidden" : "";
   const logoClass1 = hideSecondLogo ? "hidden" : "";
 
-
   // გვერდი დასაწყისიდან რომ ჩაიტვირთოს და არა შუიდან ან ქვემოდან
   const navigate = useNavigate();
   const handleAboutUsClick = () => {
@@ -129,6 +128,7 @@ function Footer({
                     Contact Us
                   </h1>
                 </Link>
+                <h1 className="text-gray-500 ">VIIleson@gmail.com</h1>
               </div>
               <div className="w-[322px] xl:w-[250px] 2xl:w-[322px] h-[240px] space-y-4 mt-4 md:mt-0">
                 <h1 className={`font-semibold md:text-black text-${textColor}`}>
@@ -180,12 +180,22 @@ function Footer({
                   Privacy Policy
                 </h1>
               </Link>
-              <h1 className="underline cursor-pointer text-black">
-                Terms of Service
-              </h1>
-              <h1 className="underline cursor-pointer text-black">
-                Cookies Settings
-              </h1>
+              <Link to="/PrivacyPolicy">
+                <h1
+                  onClick={handlePrivacyPolicyClick}
+                  className="underline cursor-pointer text-black"
+                >
+                  Terms of Service
+                </h1>
+              </Link>
+              <Link to="/PrivacyPolicy">
+                <h1
+                  onClick={handlePrivacyPolicyClick}
+                  className="underline cursor-pointer text-black"
+                >
+                  Cookies Settings
+                </h1>
+              </Link>
             </div>
           </div>
         </div>

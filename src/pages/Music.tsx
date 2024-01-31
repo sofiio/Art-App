@@ -85,7 +85,7 @@ function Music() {
         module11Text=""
         module12Title=""
         module12Text=""
-        additionalTitle=""
+        additionalTitle=": History, Musical Genres, Legends"
         assasmentText2="Mid-term project: Analytical essay on a chosen rock album or artist"
         assasmentText3="Final project: Presentation of a creative project or research paper on a modern music topic
         By the end of the course, participants will have gained a comprehensive understanding of

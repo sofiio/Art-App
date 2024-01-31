@@ -1,71 +1,75 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Syllabus from "../components/Syllabus";
 
 function PrivacyPolicy() {
   return (
     <>
       <Header />
-      <Syllabus
-        title=" Course Literature"
-        duration=" Course Duration: 10 weeks (20 sessions)"
-        module1Title=" Module 1: Introduction to Literary History"
-        module1Text=" Overview of the course objectives and structure Understanding the
-        significance of studying literary history Exploring the major
-        literary periods and movements."
-        module2Title=" Module 2: Ancient Literature"
-        module2Text=" Survey of ancient literary traditions (e.g., Mesopotamian, Greek,
-          Roman) Analysis of epic poems, myths, and oral traditions
-          Discussion on the role of literature in ancient societies"
-        module3Title="Module 3: Medieval Literature"
-        module3Text=" Examination of medieval literary works (e.g., Chaucer, Dante)
-        Exploration of religious and chivalric themes Understanding the
-        impact of societal changes on literature"
-        module4Title=" Module 4: Renaissance and Enlightenment"
-        module4Text="Study of literary developments during the Renaissance Analysis of
-        Enlightenment philosophy in literature Exploration of influential
-        figures like Shakespeare and Voltaire"
-        module5Title="Module 5: Romanticism and Realism"
-        module5Text=" Overview of the Romantic movement and its impact on literature
-        Analysis of realist literature and its social context Discussion
-        on the emergence of the novel as a literary form"
-        module6Title=" Module 6: Modernism and Postmodernism"
-        module6Text="Exploration of modernist and postmodernist literature Analysis of
-        experimental forms and narrative techniques Discussion on the
-        impact of historical events on literary expression."
-        module7Title=" Module 7: Global Perspectives"
-        module7Text=" Survey of literature from diverse cultures and regions Examination
-        of postcolonial literature and voices from the margins Discussion
-        on the interconnectedness of world literature"
-        module8Title=" Module 8: Contemporary Literature"
-        module8Text=" Analysis of contemporary literary trends Exploration of the
-        digital ages impact on literature Discussion on current debates
-        and challenges in the literary world."
-        module9Title="  Module 9: Literary Criticism and Theory"
-        module9Text="  Introduction to key literary theories (e.g., structuralism,
-          postcolonial theory) Application of critical approaches to
-          selected literary works Encouraging students to develop their
-          analytical skills"
-        module10Title=" Module 10: Interactive Workshops"
-        module10Text="  Group discussions on specific literary topics Creative writing
-        exercises inspired by various literary periods Peer review
-        sessions to foster collaborative learning"
-        module11Text=""
-        module11Title=""
-        module12Text=""
-        module12Title=""
-        assasmentTitle="  Assessment"
-        assasmentText=" Weekly quizzes on assigned readings Participation in class
-        discussions and activities"
-        additionalTitle=""
-        assasmentText2="Mid-term and final projects: Research
-        papers or creative projects exploring specific literary themes or
-        periods By the end of the course, participants will have gained a
-        nuanced understanding of the history of literature, honed critical
-        thinking skills, and developed an appreciation for the diverse
-        cultural expressions that have shaped the world of letters."
-        assasmentText3=""
-      />
+      <div className="w-full mx-auto">
+        <div className="p-4 2xl:p-0 mx-auto lg:w-[768px] md:w-[700px] w-[343px] sm:w-[500px]">
+          <h1 className="mt-12 lg:text-[30px] text-[20px] sm:text-[25px] font-bold">
+            Website terms and Conditions
+          </h1>
+          <div className="flex flex-col space-y-6">
+            <p className="mt-8 flex flex-col">
+              <span className="font-bold">1. Acceptance of Terms</span> By
+              accessing or using this website ("the Site"), you agree to comply
+              with and be bound by these terms and conditions. If you do not
+              agree to these terms, please refrain from using the Site.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">2. Use of the Site</span> You agree to
+              use the Site for lawful purposes only. You must not engage in any
+              activity that disrupts the functionality of the Site or its
+              associated services.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">3. Intellectual Property</span> All
+              content on this website, including text, images, graphics, logos,
+              or software, is the property of VII Lesson and is protected by
+              copyright and other intellectual property laws.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">4. Privacy Policy</span> Your use of
+              the Site is also governed by our Privacy Policy. By using the
+              Site, you consent to the collection, use, and disclosure of your
+              information as described in the Privacy Policy.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">5. External links</span> The Site may
+              contain links to third-party websites. These links are provided
+              for your convenience, and VII Lesson is not responsible for the
+              content or accuracy of any external sites.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">6. Disclaimer of Warranties</span> The
+              information on this Site is provided "as is" without any
+              warranties, expressed or implied. VII Lesson makes no
+              representations or warranties regarding the accuracy,
+              completeness, or reliability of the content on the Site.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">7. Limitation of liability</span> VII
+              Lesson will not be liable for any direct, indirect, incidental,
+              consequential, or punitive damages arising out of your access to
+              or use of the Site.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">
+                8. Changes of terms and conditions
+              </span>{" "}
+              VII Lesson reserves the right to modify these terms and conditions
+              at any time without notice. It is your responsibility to review
+              these terms regularly to stay informed of any changes.
+            </p>
+            <p className="flex flex-col">
+              <span className="font-bold">9. Contact Information</span> VII
+              Lesson VIIleson@gmail.com, 917 912 4845
+            </p>
+          </div>
+        </div>
+      </div>
+
       <Footer
         mobileBgColor="white"
         textColor="black"

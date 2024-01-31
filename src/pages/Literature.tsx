@@ -89,7 +89,7 @@ function Literature() {
         assasmentTitle="  Assessment"
         assasmentText=" Weekly quizzes on assigned readings Participation in class
         discussions and activities"
-        additionalTitle=""
+        additionalTitle=": History, Major periods, World heritage"
         assasmentText2="Mid-term and final projects: Research
         papers or creative projects exploring specific literary themes or
         periods By the end of the course, participants will have gained a

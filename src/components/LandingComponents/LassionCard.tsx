@@ -15,6 +15,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
   imgSrc,
   imgAlt,
   h1Text,
+  buttonLabel,
   h1TextColor,
   onClick,
   marginLeft = "0", // default value if not provided
@@ -25,7 +26,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
         <img
           src={imgSrc}
           alt={imgAlt}
-          className="block w-full h-full  transition-transform duration-300 ease-in-out transform scale-100 hover:scale-105"
+          className="block w-full lg:w-[416px] h-full 2xl:h-[300px] transition-transform duration-300 ease-in-out transform scale-100 hover:scale-105"
         />
         <div className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 ease-in-out bg-gradient-to-t from-blue-300 via-blue-200 to-transparent hover:opacity-50 rounded-lg"></div>
       </div>
@@ -36,7 +37,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
           {h1Text}
         </h1>
         <CustomButton
-          text="10 Weeks"
+          text={buttonLabel}
           width="w-[76px]"
           height="h-[29px]"
           marginTop="md:mt-[16px]"

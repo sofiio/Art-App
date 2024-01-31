@@ -11,7 +11,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
-    <>
      <BrowserRouter>
       <Routes>
       <Route path="/" element={<Landing />} />
@@ -24,7 +23,6 @@ function App() {
       <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
       </Routes>
     </BrowserRouter>
-    </>
   )
 }
 
