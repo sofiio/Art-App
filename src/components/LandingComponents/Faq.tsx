@@ -109,8 +109,8 @@ const Faq: React.FC = () => {
             : "xl:h-[1096px] h-[760px]"
         } ${
           isDropdownVisible1
-            ? "xl:h-[1500px] md:h-[1400px] h-[1245px]"
-            : "xl:h-[1096px] md:h-[1000px] h-[760px]"
+            ? "xl:h-[1500px] md:h-[1400px] h-"
+            : "xl:h-[1096px] md:h-[1000px] h-"
         } flex flex-col items-center`}
       >
         <div className="xl:w-[768px] xl:mt-[112px] mt-[36px] h-[154px] flex items-center text-center">
@@ -400,19 +400,21 @@ const Faq: React.FC = () => {
             )}
           </div>
         </div>
-        <h1
-          className={`text-white font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px]   ${
+        <div
+        
+          className={`text-white  font-quinapple xl:font-sans font-bold xl:text-[32px] text-[20px]   ${
             isDropdownVisible2
-              ? "xl:mt-[455px] md:mt-[500px] mt-[375px] "
+              ? "xl:mt-[470px]  md:mt-[500px] mt-[350px] "
               : "xl:mt-[50px] mt-[80px]"
           } ${
             isDropdownVisible1
-              ? "xl:mt-[400px] md:mt-[450px] mt-[275px] "
-              : "xl:mt-[50px] mt-[80px] "
+              ? "xl:mt-0 md:mt-[450px] mt-0 "
+              : "xl:mt-0 mt-0 "
           }`}
         >
           Still have questions<span className="font-sans "> ?</span>
-        </h1>
+        
+        </div>
         <Link to="/ContactUs">
           <div className="mb-20 xl:mb-0">
             <CustomButton
