@@ -116,7 +116,7 @@ const Faq: React.FC = () => {
         </div>
         <div className="md:w-[700px] lg:w-[768px] flex flex-col items-center md:items-start  w-[343px] space-y-4 xl:space-y-0 h-[465px] mt-[32px] md:mt-[80px]">
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+            <div onClick={toggleDropdown1} className="flex cursor-pointer md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
               <div className="w-[250px] sm:w-auto">
                 <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
                   What are the classes schedules and Durations?
@@ -181,7 +181,7 @@ const Faq: React.FC = () => {
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+            <div onClick={toggleDropdown2} className="flex cursor-pointer md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
               <div className="w-[250px] sm:w-auto">
                 <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
                   How much do the classes cost?
@@ -258,7 +258,7 @@ const Faq: React.FC = () => {
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+            <div  onClick={toggleDropdown3} className=" cursor-pointer flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
               <div className="w-[250px] sm:w-auto">
                 <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
                   Where do the lessons take place?
@@ -297,7 +297,7 @@ const Faq: React.FC = () => {
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+            <div  onClick={toggleDropdown4} className=" cursor-pointer flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
               <div className="w-[250px] sm:w-auto">
                 <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
                   What topics are cover in the classes?
@@ -309,7 +309,7 @@ const Faq: React.FC = () => {
                 className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
                   isRotated3 ? "rotate-180" : ""
                 }`}
-                onClick={toggleDropdown4}
+               
                 style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
@@ -358,7 +358,7 @@ const Faq: React.FC = () => {
           </div>
 
           <div>
-            <div className="flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
+            <div onClick={toggleDropdown5} className=" cursor-pointer flex md:w-[700px] lg:w-[768px] w-[311px] sm:w-[500px] md:h-[72px] h-[41px] bg-white md:bg-black text-black md:text-white items-center sm:justify-between justify-around border-b-2 border-gray-500 sm:px-4 md:px-0">
               <div className="w-[250px] sm:w-auto">
                 <h1 className="md:text-[18px] text-[12px] font-bold font-sans">
                   Is there Any prerequisite knowledge or skill required?
@@ -370,7 +370,7 @@ const Faq: React.FC = () => {
                 className={`w-[32px] h-[32px] hidden md:block cursor-pointer ${
                   isRotated4 ? "rotate-180" : ""
                 }`}
-                onClick={toggleDropdown5}
+                
                 style={{ transition: "transform 0.3s ease" }}
               ></img>
               <img
