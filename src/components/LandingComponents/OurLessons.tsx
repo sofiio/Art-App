@@ -86,7 +86,7 @@ const OurLessons: React.FC<HeadingProps> = ({
             <div className="">
               <div onClick={() => handleLessonClick(lesson.id)}>
                 <LassionCard
-                  imgSrc="/children.png"
+                  imgSrc="/theatre3.png"
                   imgAlt=""
                   h1Text={lesson.attributes.title}
                   buttonLabel={lesson.attributes.duration}
