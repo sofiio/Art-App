@@ -54,5 +54,4 @@ const LassionCard: React.FC<LassionCardProps> = ({
     </div>
   );
 };
-
 export default LassionCard;

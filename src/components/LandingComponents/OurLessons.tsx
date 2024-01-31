@@ -3,41 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-interface ImageData {
-  id: number;
-  url:any;
-  attributes: {
-    name: string;
-    alternativeText: string | null;
-    caption: string | null;
-    width: number;
-    height: number;
-    formats: any | null;
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
-    url: string;
-    previewUrl: string | null;
-    provider: string;
-    provider_metadata: any | null;
-    createdAt: string;
-    updatedAt: string;
-  };
-}
-
 interface Lesson {
   id: number;
   attributes: {
     duration: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
     title: string;
-    image: {
-      data: ImageData;
-      
-    };
   };
 }
 
@@ -45,12 +15,16 @@ interface HeadingProps {
   color: string;
   readMoreText: string;
   h1TextColor: string;
+  imgSrc: string;
+  imgAlt: string;
 }
 
 const OurLessons: React.FC<HeadingProps> = ({
   color,
   readMoreText,
   h1TextColor,
+  imgAlt,
+  imgSrc,
 }) => {
   const navigate = useNavigate();
   const [lessons, setLessons] = useState<Lesson[]>([]);
@@ -61,7 +35,14 @@ const OurLessons: React.FC<HeadingProps> = ({
         const response = await axios.get(
           "http://localhost:1337/api/our-lessons?populate=*"
         );
-        setLessons(response.data.data);
+        const extractedLessons = response.data.data.map((lesson: any) => ({
+          id: lesson.id,
+          attributes: {
+            duration: lesson.attributes.duration,
+            title: lesson.attributes.title,
+          },
+        }));
+        setLessons(extractedLessons);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -89,7 +70,6 @@ const OurLessons: React.FC<HeadingProps> = ({
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
-
   return (
     <div
       id="OurLessons"
@@ -106,8 +86,7 @@ const OurLessons: React.FC<HeadingProps> = ({
             <div className="">
               <div onClick={() => handleLessonClick(lesson.id)}>
                 <LassionCard
-                  // imgSrc={lesson.attributes.image.data.attributes.url}
-                  imgSrc=""
+                  imgSrc="/children.png"
                   imgAlt=""
                   h1Text={lesson.attributes.title}
                   buttonLabel={lesson.attributes.duration}
@@ -125,11 +104,12 @@ const OurLessons: React.FC<HeadingProps> = ({
                   Read more
                 </h1>
                 <div className="ml-[8px]">
-                  {/* <img
+                  {/* Use the appropriate image source */}
+                  <img
                     src={imgSrc}
                     alt={imgAlt}
                     className="w-[18px] h-[15px] md:w-auto md:h-auto"
-                  /> */}
+                  />
                 </div>
               </button>
             </div>
