@@ -81,7 +81,10 @@ const Syllabus: React.FC<SyllabusSectionProps> = ({
         <h1>SYLLABUS</h1>
       </div>
       <div className=" flex justify-between md:mt-[60px] mt-[50px] items-center">
-        <div className="flex md:w-[700px] xl:w-[952px]">
+        <div
+          onClick={toggleDropdown}
+          className="flex md:w-[700px] xl:w-[952px] cursor-pointer "
+        >
           <h1 className="lg:text-[32px] text-[22px] sm:text-[24px] md:text-[28px] font-bold ">
             {title}
           </h1>
@@ -90,7 +93,6 @@ const Syllabus: React.FC<SyllabusSectionProps> = ({
           </h1>
         </div>
         <img
-          onClick={toggleDropdown}
           src="/blarow.svg"
           alt=""
           className={`w-[32px] h-[32px] cursor-pointer ${

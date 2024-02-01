@@ -1,7 +1,7 @@
 import CustomButton from "../CustomButton";
 
 interface LassionCardProps {
-  imgSrc: string;
+  imgSrc1: string;
   imgAlt: string;
   h1Text: string;
   buttonLabel: string;
@@ -12,7 +12,7 @@ interface LassionCardProps {
 }
 
 const LassionCard: React.FC<LassionCardProps> = ({
-  imgSrc,
+  imgSrc1,
   imgAlt,
   h1Text,
   buttonLabel,
@@ -24,7 +24,7 @@ const LassionCard: React.FC<LassionCardProps> = ({
     <div className="w-[310px] sm:w-[327px] h-[238px] 2xl:w-auto 2xl:h-auto">
       <div className="relative overflow-hidden inline-block rounded-[12px]">
         <img
-          src={imgSrc}
+          src={imgSrc1}
           alt={imgAlt}
           className="block w-[327px] lg:w-[416px] h-[238px] 2xl:h-[300px] transition-transform duration-300 ease-in-out transform scale-100 hover:scale-105"
         />
