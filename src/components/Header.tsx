@@ -77,6 +77,7 @@ function Header() {
               Gallery
             </h1>
           </Link>
+          <Link to="/AboutUs">
           <CustomButton
             text="Get started"
             textColor="text-black"
@@ -85,7 +86,9 @@ function Header() {
             marginTop="mt-0"
             backgroundColor="bg-white"
             hoverEffect="hover:bg-customColor"
+            onClick={handleAboutUsClick}
           />
+           </Link>
         </div>
         <div
           className="w-[39px] h-[39px] block xl:hidden"

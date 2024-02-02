@@ -34,7 +34,7 @@ function AboutUs() {
         </h1>
       </div>
       <OurTeam />
-      <Founders />
+      {/* <Founders /> */}
       {/* texts */}
       <div className="2xl:w-[1312px] lg:w-[900px] sm:w-[500px] w-[343px] md:w-[700px] lg:h-[362px] h-[571px] sm:h-[350px] mx-auto mt-[350px] lg:mt-0 2xl:mt-[61px]">
         <h1 className="2xl:text-[20px] text-[16px] font-medium">
