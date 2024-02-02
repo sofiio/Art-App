@@ -1,8 +1,8 @@
 function Founders() {
   return (
     <>
-      <div className="2xl:w-[1440px] lg:w-[900px] w-[375px] sm:w-[500px] md:w-[700px] mx-auto flex flex-row">
-        <div className="flex lg:mt-[163px] mt-[57px] mx-auto lg:w-[1312px] w-[343px] sm:w-[500px] md:w-[700px] h-[567px]">
+      <div className="2xl:w-[1440px] lg:w-[900px] w-[350px] sm:w-[500px] md:w-[700px] mx-auto flex flex-row">
+        <div className="flex lg:mt-[163px] mt-[57px] mx-auto lg:w-[1312px] w-[340px] sm:w-[500px] md:w-[700px] h-[567px]">
           <div className="lg:w-[657px] w-[343px] sm:w-[500px]  md:w-[700px] lg:h-[547px] h-[567px] flex flex-col items-center lg:items-start">
             <h1 className="lg:text-[32px] text-[28px] font-black font-quinapple">
               GIORGI TSITURI

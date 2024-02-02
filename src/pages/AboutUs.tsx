@@ -26,7 +26,10 @@ function AboutUs() {
       {/* text */}
       <div className="2xl:w-[1312px] lg:w-[900px] w-[343px] sm:w-[500px] md:w-[700px] lg:h-[192px] h-[261px] lg:mt-[75px] mt-[32px] mx-auto font-black">
         {/* same here as in landing component, no need to use seter, just used to be used and not having error. no need of it */}
-        <h1 onClick={() => setH1TextColor("black")} className="lg:text-[40px] text-[24px] font-quinapple">
+        <h1
+          onClick={() => setH1TextColor("black")}
+          className="lg:text-[40px] text-[24px] font-quinapple"
+        >
           Our non-formal educational classes are your gateway to the captivating
           realms of theater, literature, and music, where legendary actors,
           writers and rock stars have left an indelible mark on the world's
@@ -34,7 +37,7 @@ function AboutUs() {
         </h1>
       </div>
       <OurTeam />
-      {/* <Founders /> */}
+      <Founders />
       {/* texts */}
       <div className="2xl:w-[1312px] lg:w-[900px] sm:w-[500px] w-[343px] md:w-[700px] lg:h-[362px] h-[571px] sm:h-[350px] mx-auto mt-[350px] lg:mt-0 2xl:mt-[61px]">
         <h1 className="2xl:text-[20px] text-[16px] font-medium">
@@ -119,8 +122,8 @@ function AboutUs() {
         textColor="black"
         hideFirstImageMobile={false}
         SecondImageMobile={true}
-        hideLogo = {false}
-        hideSecondLogo = {true}
+        hideLogo={false}
+        hideSecondLogo={true}
       />
     </>
   );
