@@ -33,7 +33,7 @@ function OurMission() {
     const fetchData = async () => {
       try {
         const response = await axios.get<{ data: ImageData[] }>(
-          "http://localhost:1337/api/our-missons?populate=*"
+          "https://monkfish-app-egtqt.ondigitalocean.app/api/our-missons?populate=*"
         );
         // Assuming there is only one item in the response for simplicity
         const imageDataFromApi = response.data.data[0];
@@ -55,14 +55,14 @@ function OurMission() {
           </h1>
           {imageData && (
             <img
-              src={`http://localhost:1337${imageData.attributes.image.data.attributes.url}`}
+              src={`https://monkfish-app-egtqt.ondigitalocean.app${imageData.attributes.image.data.attributes.url}`}
               alt={imageData.attributes.image.data.attributes.name}
               className="block sm:hidden mt-[24px] w-[327px] h-[260px]"
             />
           )}
           {imageData && (
             <img
-              src={`http://localhost:1337${imageData.attributes.image.data.attributes.url}`}
+              src={`https://monkfish-app-egtqt.ondigitalocean.app${imageData.attributes.image.data.attributes.url}`}
               alt={imageData.attributes.image.data.attributes.name}
               className="hidden sm:block mt-[24px] w-[770px] 2xl:hidden h-[400px]"
             />
@@ -80,7 +80,7 @@ function OurMission() {
         <div className="w-[628px] h-[488px] ml-[88px] hidden 2xl:block">
           {imageData && (
             <img
-              src={`http://localhost:1337${imageData.attributes.image.data.attributes.url}`}
+              src={`https://monkfish-app-egtqt.ondigitalocean.app${imageData.attributes.image.data.attributes.url}`}
               alt={imageData.attributes.image.data.attributes.name}
               className="w-[628px] h-[486px]"
             />

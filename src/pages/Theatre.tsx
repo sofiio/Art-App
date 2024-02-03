@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Share from "../components/Share";
@@ -5,7 +7,46 @@ import SharedComponent from "../components/SharedComponent";
 import Syllabus from "../components/Syllabus";
 import Title from "../components/Title";
 
+// Define the type for the syllabus data
+interface SyllabusData {
+  CourseDuration: string;
+  assasmentText: string;
+  assasmentText2: string;
+  assasmentText3: string;
+  // Add more properties as needed
+}
+
 function Theatre() {
+  const [syllabusData, setSyllabusData] = useState<SyllabusData | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://monkfish-app-egtqt.ondigitalocean.app/api/syllabi?populate=*"
+        );
+        setSyllabusData(response.data.data[0].attributes);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures this runs once on component mount
+
+  if (!syllabusData) {
+    // Handle loading state
+    return <div>Loading...</div>;
+  }
+
+  const {
+    CourseDuration,
+    assasmentText,
+    assasmentText2,
+    assasmentText3,
+    // Add more variables as needed from the fetched data
+  } = syllabusData;
+
   const sections = [
     {
       image: "/theatre2.png",
@@ -20,7 +61,7 @@ function Theatre() {
   ];
 
   const coverImage = "/theatrecover.png";
-  const seperateText =
+  const separateText =
     "Theater is a vibrant art form that has enchanted audiences for centuries. Our classes delve into the captivating history of theater, exploring the evolution of acting techniques and the iconic performers who brought characters to life. From the timeless works of Shakespeare to the avant-garde productions of today, our students gain a deeper appreciation for the power of the stage.";
 
   return (
@@ -33,11 +74,11 @@ function Theatre() {
       <SharedComponent
         sections={sections}
         coverImage={coverImage}
-        seperateText={seperateText}
+        seperateText={separateText}
       />
       <Syllabus
         title="Course Theatre"
-        duration="Course Duration: 12 weeks (24 sessions)"
+        duration={CourseDuration}
         module1Title="Module 1: Introduction to Theatre"
         module1Text="Overview of the course objectives and structure
         Historical overview of theatre as an art form
@@ -88,11 +129,9 @@ function Theatre() {
         Discussion on the continued exploration of theatre beyond the course"
         assasmentTitle="Assessment:"
         additionalTitle=": History, Production, and Acting Masterclasses"
-        assasmentText="Weekly reflections on theoretical readings and class discussions
-        Participation in practical exercises, workshops, and masterclasses"
-        assasmentText2="Mid-term project: Conceptualization and presentation of a theatrical production idea"
-        assasmentText3=" Final project: Performance or presentation of scenes, monologues, or an original short play By the end of the course, participants will have gained a comprehensive understanding of theatre&#39;s history, production processes, and acting techniques, fostering a deeper appreciation for the art form and providing a solid foundation for further exploration and engagement in the
-        world of theatre."
+        assasmentText={assasmentText}
+        assasmentText2={assasmentText2}
+        assasmentText3={assasmentText3}
       />
       <Share />
       <Footer

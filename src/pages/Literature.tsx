@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Share from "../components/Share";
@@ -5,7 +7,47 @@ import SharedComponent from "../components/SharedComponent";
 import Syllabus from "../components/Syllabus";
 import Title from "../components/Title";
 
+interface SyllabusData2 {
+  LiteratureCourseDuration: string;
+  LiteratureAssasmentText: string;
+  LiteratureAssasmentText2: string;
+  LiteratureAssasmentText3: string;
+  // Add more properties as needed
+}
+
 function Literature() {
+  const [syllabusData2, setSyllabusData2] = useState<SyllabusData2 | null>(
+    null
+  );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://monkfish-app-egtqt.ondigitalocean.app/api/literature-sylabuses?populate=*"
+        );
+        setSyllabusData2(response.data.data[0].attributes);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures this runs once on component mount
+
+  if (!syllabusData2) {
+    // Handle loading state
+    return <div>Loading...</div>;
+  }
+
+  const {
+    LiteratureCourseDuration,
+    LiteratureAssasmentText,
+    LiteratureAssasmentText2,
+    LiteratureAssasmentText3,
+    // Add more variables as needed from the fetched data
+  } = syllabusData2;
+
   const sections = [
     {
       image: "/fw.png",
@@ -40,7 +82,7 @@ function Literature() {
 
       <Syllabus
         title=" Course Literature"
-        duration=" Course Duration: 10 weeks (20 sessions)"
+        duration={LiteratureCourseDuration}
         module1Title=" Module 1: Introduction to Literary History"
         module1Text=" Overview of the course objectives and structure Understanding the
         significance of studying literary history Exploring the major
@@ -87,16 +129,10 @@ function Literature() {
         module12Text=""
         module12Title=""
         assasmentTitle="  Assessment"
-        assasmentText=" Weekly quizzes on assigned readings Participation in class
-        discussions and activities"
+        assasmentText={LiteratureAssasmentText}
         additionalTitle=": History, Major periods, World heritage"
-        assasmentText2="Mid-term and final projects: Research
-        papers or creative projects exploring specific literary themes or
-        periods By the end of the course, participants will have gained a
-        nuanced understanding of the history of literature, honed critical
-        thinking skills, and developed an appreciation for the diverse
-        cultural expressions that have shaped the world of letters."
-        assasmentText3=""
+        assasmentText2={LiteratureAssasmentText2}
+        assasmentText3={LiteratureAssasmentText3}
       />
       <Share />
       <Footer

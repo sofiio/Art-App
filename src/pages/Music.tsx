@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Share from "../components/Share";
@@ -5,7 +7,47 @@ import SharedComponent from "../components/SharedComponent";
 import Syllabus from "../components/Syllabus";
 import Title from "../components/Title";
 
+interface SyllabusData1 {
+  MusicCourseDuration: string;
+  MusicAssasmentText: string;
+  MusicAssasmentText2: string;
+  MusicAssasmentText3: string;
+  // Add more properties as needed
+}
+
 function Music() {
+  const [syllabusData1, setSyllabusData1] = useState<SyllabusData1 | null>(
+    null
+  );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://monkfish-app-egtqt.ondigitalocean.app/api/music-syllabi?populate=*"
+        );
+        setSyllabusData1(response.data.data[0].attributes);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures this runs once on component mount
+
+  if (!syllabusData1) {
+    // Handle loading state
+    return <div>Loading...</div>;
+  }
+
+  const {
+    MusicCourseDuration,
+    MusicAssasmentText,
+    MusicAssasmentText2,
+    MusicAssasmentText3,
+    // Add more variables as needed from the fetched data
+  } = syllabusData1;
+
   const sections = [
     {
       image: "/mus1.png",
@@ -37,7 +79,7 @@ function Music() {
 
       <Syllabus
         title=" Course Music"
-        duration=" Course Duration: 10 weeks (20 sessions)"
+        duration={MusicCourseDuration}
         module1Title="Module 1: Introduction to Modern Music"
         module1Text="Overview of the course objectives and structure
       Exploration of key musical genres in the modern era
@@ -79,18 +121,14 @@ function Music() {
         Creative projects, such as creating a virtual rock band or curating a playlist
         Final presentations showcasing individual or group projects"
         assasmentTitle=" Assessment:"
-        assasmentText=" Participation in class discussions and activities
-        Short written reflections on weekly topics"
+        assasmentText={MusicAssasmentText}
         module11Title=""
         module11Text=""
         module12Title=""
         module12Text=""
         additionalTitle=": History, Musical Genres, Legends"
-        assasmentText2="Mid-term project: Analytical essay on a chosen rock album or artist"
-        assasmentText3="Final project: Presentation of a creative project or research paper on a modern music topic
-        By the end of the course, participants will have gained a comprehensive understanding of
-        modern music, particularly within the rock genre, and will have explored the cultural, social, and
-        artistic dimensions of rock star fame."
+        assasmentText2={MusicAssasmentText2}
+        assasmentText3={MusicAssasmentText3}
       />
       <Share />
       <Footer

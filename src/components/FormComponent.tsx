@@ -28,7 +28,7 @@ function FormComponent() {
     };
 
     try {
-      const response = await fetch("http://localhost:1337/api/user-emails", {
+      const response = await fetch("https://monkfish-app-egtqt.ondigitalocean.app/api/user-emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

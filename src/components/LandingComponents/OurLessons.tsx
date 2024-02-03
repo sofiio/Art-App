@@ -28,7 +28,7 @@ interface HeadingProps {
   imgSrc: string;
   imgAlt: string;
 }
-const strapiBaseUrl = "http://localhost:1337";
+const strapiBaseUrl = "https://monkfish-app-egtqt.ondigitalocean.app";
 
 const OurLessons: React.FC<HeadingProps> = ({
   color,
@@ -44,7 +44,7 @@ const OurLessons: React.FC<HeadingProps> = ({
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1337/api/our-lessons?populate=*"
+          "https://monkfish-app-egtqt.ondigitalocean.app/api/our-lessons?populate=*"
         );
 
         const extractedLessons = response.data.data.map((lesson: any) => {

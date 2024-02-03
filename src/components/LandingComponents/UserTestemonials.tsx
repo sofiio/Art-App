@@ -26,7 +26,7 @@ function UserTestimonials() {
   const [testimonials, setTestimonials] = useState<StrapiTestimonial[]>([]);
 
   useEffect(() => {
-    const apiUrl = "http://localhost:1337/api/user-testimonials?populate=Image";
+    const apiUrl = "https://monkfish-app-egtqt.ondigitalocean.app/api/user-testimonials?populate=Image";
 
     axios
       .get<{ data: StrapiTestimonial[] }>(apiUrl)
@@ -57,7 +57,7 @@ function UserTestimonials() {
           const firstTestimonial = data.data[0];
           console.log(
             "Image URL:",
-            `http://localhost:1337${firstTestimonial.attributes.Image.data.attributes.url}`
+            `https://monkfish-app-egtqt.ondigitalocean.app${firstTestimonial.attributes.Image.data.attributes.url}`
           );
         }
       })
@@ -68,7 +68,7 @@ function UserTestimonials() {
   if (error) {
     return <div>An error occurred: {error.message}</div>;
   }
-  const strapiBaseUrl = "http://localhost:1337";
+  const strapiBaseUrl = "https://monkfish-app-egtqt.ondigitalocean.app";
   return (
     <div className="w-full md:bg-white bg-black">
       <div className="xl:max-w-[1312px] mx-auto xl:h-[780px] md:h-[1394px] h-[500px] font-black xl:font-normal flex flex-col items-center">
